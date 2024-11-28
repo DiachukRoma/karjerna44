@@ -1,0 +1,198 @@
+@import '../common/variables';
+@import '../layouts/header-sipmple-page';
+
+body.search {
+  .top {
+    margin-top: 5.5rem;
+    padding: 5rem 0;
+  }
+
+  .content {
+    margin: 5rem 0;
+    min-height: calc(100vh - 920px);
+
+    @include _600 {
+      margin: 3rem 0;
+    }
+
+    &__results {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+
+      @include _992 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      @include _600 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .search {
+      position: relative;
+      background-color: #f2f2f2;
+      border-radius: 4px;
+
+      &__photo {
+        height: 340px;
+        display: block;
+        position: relative;
+        background-size: cover;
+        background-position: center center;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+
+        @include _1600 {
+          height: 300px;
+        }
+
+        @include _1440 {
+          height: 240px;
+        }
+
+        @include _768 {
+          height: 300px;
+        }
+
+        @include _600 {
+          height: 240px;
+        }
+      }
+
+      &__letters {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 9rem;
+        font-weight: 700;
+        font-family: $inter;
+        letter-spacing: -10px;
+        background-color: #ebebeb;
+        color: #d0d0d04a;
+        border-radius: 100%;
+        width: 250px;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &__date {
+        background: $white;
+        text-align: center;
+        width: 3.75rem;
+        height: 2.75rem;
+        padding: 0.25rem 0;
+        position: absolute;
+        top: 0;
+        left: 1.125rem;
+
+        &-day {
+          font-size: 1.25rem;
+          letter-spacing: 1px;
+          margin: 0;
+        }
+
+        &-mo {
+          color: #232323cc;
+          font-size: 0.625rem;
+          line-height: 120%;
+          letter-spacing: 0.0313rem;
+          margin: 0;
+        }
+      }
+
+      &__title {
+        color: $main;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        margin: 1rem 0;
+        display: block;
+      }
+
+      &__description {
+        letter-spacing: 0.7px;
+      }
+
+      &__more {
+        color: $light;
+        font-size: 14px;
+
+        &:hover {
+          color: $global;
+        }
+      }
+
+      &__infos {
+        padding: 0.5rem 1.5rem 1.5rem;
+      }
+
+      /* stylelint-disable no-descending-specificity */
+      &__navigation {
+        .nav-links {
+          margin-top: 1.5rem;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+
+          a {
+            position: relative;
+            font-size: 16px;
+            color: $light;
+
+            &::after {
+              content: '';
+              position: absolute;
+              top: 3.5px;
+              width: 1rem;
+              height: 1rem;
+              background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2220%22%20viewBox%3D%220%200%2010%2020%22%20fill%3D%22none%22%3E%0A%09%3Cpath%20d%3D%22M0.623409%200.686829C0.465262%200.686829%200.30342%200.749352%200.182052%200.87072C-0.0606842%201.11346%20-0.0606842%201.51066%200.182052%201.7534L8.49025%2010.0616L0.30342%2018.2484C0.0606833%2018.4912%200.0606833%2018.8884%200.30342%2019.1311C0.546156%2019.3738%200.943361%2019.3738%201.1861%2019.1311L9.81795%2010.5029C10.0607%2010.2602%2010.0607%209.863%209.81795%209.62026L1.06841%200.87072C0.943362%200.745674%200.785233%200.686829%200.623409%200.686829Z%22%20fill%3D%22%23232323%22%20%2F%3E%0A%3C%2Fsvg%3E%0A');
+              background-repeat: no-repeat;
+              background-size: contain;
+              opacity: 0.3;
+
+              @include transition;
+            }
+
+            &:hover {
+              color: $global;
+            }
+
+            &:hover::after {
+              opacity: 0.5;
+            }
+          }
+
+          .nav-previous a {
+            padding-right: 2rem;
+
+            &::after {
+              right: 0;
+            }
+
+            &:hover::after {
+              right: -4px;
+            }
+          }
+
+          .nav-next a {
+            padding-left: 2rem;
+
+            &::after {
+              left: 0;
+              transform: rotateZ(180deg);
+            }
+
+            &:hover::after {
+              left: -4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

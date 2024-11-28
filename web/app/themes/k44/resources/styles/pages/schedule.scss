@@ -1,0 +1,67 @@
+@import '../common/variables';
+@import '../layouts/header-sipmple-page';
+
+body {
+  background: #f2f2f2;
+}
+
+.content {
+  margin: 4rem 0;
+
+  .schedule {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    @include _1170 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include _600 {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.container {
+  max-width: 1440px;
+}
+
+.single {
+  &__schedule {
+    padding: 1.5rem;
+    background-color: $white;
+    text-align: center;
+
+    &-title {
+      font-family: $inter;
+      color: $main;
+      font-size: 2rem;
+      line-height: 100%;
+      text-transform: uppercase;
+
+      @include _600 {
+        font-size: 1.5rem;
+      }
+    }
+
+    &-description {
+      color: $global;
+      font-size: 0.875rem;
+      line-height: 120%;
+      letter-spacing: 0.7px;
+    }
+
+    &-info {
+      color: $main;
+      font-size: 1.2rem;
+      line-height: 180%;
+
+      strong {
+        font-family: $inter;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

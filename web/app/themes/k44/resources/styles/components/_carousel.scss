@@ -1,0 +1,88 @@
+$slick-font-path: '~slick-carousel/slick/fonts/';
+$slick-loader-path: '~slick-carousel/slick/';
+
+@import '~slick-carousel/slick/slick';
+@import '~slick-carousel/slick/slick-theme';
+@import '../components/slide';
+
+.slick-slide {
+  margin: 0 12px;
+}
+
+.slick-list {
+  margin: 0 -12px;
+}
+
+.slider {
+  &__arrows {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__arrow {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $silver;
+    }
+  }
+
+  &__navigation {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    @include _768 {
+      grid-template-columns: 1fr 1fr;
+      margin-top: 1.5rem;
+    }
+
+    .slick-dots {
+      position: relative;
+      bottom: 2px;
+
+      li {
+        width: 50px;
+        height: 5px;
+        background-color: $light;
+
+        button {
+          display: none;
+        }
+
+        &.slick-active {
+          background-color: $main;
+        }
+      }
+    }
+
+    &-block {
+      display: flex;
+      align-items: center;
+
+      &:nth-child(2) {
+        justify-content: center;
+
+        @include _768 {
+          display: none;
+        }
+      }
+
+      &:nth-child(3) {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &.slick-dotted.slick-slider {
+    margin-bottom: 50px;
+  }
+}

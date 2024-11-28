@@ -1,0 +1,142 @@
+@import '../common/variables';
+@import '../layouts/header-sipmple-page';
+@import '../components/slide';
+@import 'vanilla-calendar-pro/build/vanilla-calendar.min.css';
+
+.blog,
+.archive {
+  .main {
+    margin: 3rem 0;
+    min-height: calc(100vh - 54.125rem);
+
+    .top {
+      margin-top: 5.4rem;
+      padding: 5rem 0;
+    }
+
+    .widgets {
+      margin: 3rem 0 1.5rem;
+
+      &__search {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+
+        @include _992 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include _768 {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        &-input {
+          grid-area: 1 / 1 / 2 / 3;
+
+          @include _992 {
+            grid-area: auto;
+          }
+        }
+
+        &-calendar {
+          grid-area: 1 / 3 / 2 / 4;
+
+          @include _992 {
+            grid-area: auto;
+          }
+        }
+      }
+    }
+
+    .worship {
+      margin-top: 1.5rem;
+      min-height: 23.5rem;
+
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem 1.5rem;
+
+        @include _1170 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include _768 {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      &__load-more {
+        margin: 3rem auto;
+        display: block;
+        position: relative;
+
+        img {
+          display: none;
+          position: absolute;
+          top: 8px;
+          right: 11px;
+        }
+
+        &.loading img {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .content {
+    &__calendar {
+      z-index: 100;
+      height: fit-content;
+      background-color: $blue;
+      padding: 1.5rem;
+      min-width: 24rem;
+      border-radius: 0.5rem;
+
+      @include _480 {
+        min-width: 18rem;
+      }
+
+      .vanilla-calendar {
+        &-week__day,
+        &-month,
+        &-year {
+          font-size: 1rem;
+        }
+
+        &-day__btn {
+          min-height: 2.5rem;
+          background-color: $blue !important;
+
+          &_selected {
+            background-color: $grey !important;
+            color: $main;
+          }
+        }
+
+        &-header {
+          padding: 0 0.75rem;
+        }
+
+        &-years__year,
+        &-months__month,
+        &-day__btn {
+          background-color: $blue !important;
+          color: $darkGrey !important;
+          font-size: 1rem;
+
+          &_selected {
+            background-color: $silver !important;
+            color: $white;
+          }
+        }
+
+        &-day__btn_disabled {
+          color: #676767 !important;
+        }
+      }
+    }
+  }
+}

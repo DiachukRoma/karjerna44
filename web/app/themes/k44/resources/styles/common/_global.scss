@@ -1,0 +1,150 @@
+@import './fonts';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: Lato, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: $fl;
+  margin: auto;
+  padding: 0 1rem;
+
+  @media (min-width: $lg) {
+    padding: 0 4rem;
+  }
+}
+
+@for $i from 1 through 6 {
+  h#{7 - $i} {
+    font-weight: 700;
+    margin: 0;
+    font-family: Inter, sans-serif;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+
+  @include _768 {
+    font-size: 2.6rem;
+    line-height: 3rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+  letter-spacing: 0.05em;
+
+  @include _768 {
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+  }
+}
+
+h3 {
+  font-size: 2.25rem;
+  line-height: 3.375rem;
+  letter-spacing: 0.05em;
+
+  @include _768 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+}
+
+h4 {
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: 0.05em;
+}
+
+h5 {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  letter-spacing: 0.05em;
+}
+
+p {
+  color: $global;
+  font-size: 0.875rem;
+  line-height: 120%;
+  letter-spacing: 0.04rem;
+}
+
+.overflow-h {
+  overflow: hidden;
+  padding-right: 4px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site {
+  &__container {
+    position: relative;
+    z-index: 3;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $main;
+}
+
+.standart {
+  &__block-title {
+    padding: 4.2rem 0 1rem;
+    text-align: center;
+    color: $main;
+
+    &--light {
+      color: $white;
+    }
+  }
+
+  &__block-subtitle {
+    text-align: center;
+    margin: 0 auto 3rem;
+    letter-spacing: 0.7px;
+    max-width: 380px;
+  }
+}
+
+body.admin-bar {
+  margin-top: 2rem;
+
+  header {
+    top: 2rem;
+  }
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vw;
+}

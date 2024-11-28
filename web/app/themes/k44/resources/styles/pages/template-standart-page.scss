@@ -1,0 +1,25 @@
+@import '../common/variables';
+@import '../layouts/content-data';
+@import '../layouts/header-sipmple-page';
+
+#app {
+  background: #f2f2f2;
+}
+
+.content {
+  margin: 4rem 0;
+  min-height: 12.5rem;
+
+  .container {
+    max-width: 1440px;
+    display: block;
+
+    h3 {
+      font-size: 1.6rem;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+    }
+  }
+}

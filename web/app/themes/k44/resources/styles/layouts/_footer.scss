@@ -1,0 +1,90 @@
+.footer {
+  padding: 5rem 0 0;
+  background-color: $blue;
+  color: $white;
+
+  @include _992 {
+    padding: 2.5rem 0 0;
+  }
+
+  &__blocks {
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr;
+    gap: 1rem;
+
+    @include _992 {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+
+    &-logo {
+      display: flex;
+      gap: 0.875rem;
+    }
+
+    &-slug-title {
+      font-size: 1rem;
+      line-height: 1.75rem;
+      text-transform: uppercase;
+    }
+
+    &-slug {
+      color: #fffc;
+      font-size: 1rem;
+      line-height: 137.5%;
+      margin: 0;
+      max-width: 16rem;
+    }
+
+    p {
+      max-width: 16rem;
+    }
+  }
+
+  &__nav {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    @include _480 {
+      display: flex;
+      flex-flow: wrap;
+      gap: 0.2rem 1rem;
+
+      li {
+        min-width: calc(50% - 0.5rem);
+      }
+    }
+
+    a {
+      color: $white;
+      line-height: 137.5%;
+      margin: 2.5px 0;
+      display: block;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__copyright {
+    margin-top: 5rem;
+    padding: 0.875rem;
+    font-size: 0.875rem;
+    text-align: center;
+    background-color: #333840;
+
+    @include _992 {
+      margin-top: 2.5rem;
+    }
+  }
+}

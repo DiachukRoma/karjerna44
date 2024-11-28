@@ -1,0 +1,42 @@
+@import '../common/variables';
+@import '../layouts/header-sipmple-page';
+@import '../components/slide';
+
+body.post-type-archive-ministers {
+  background: #f2f2f2;
+
+  .top {
+    &__title {
+      margin: 2rem 0;
+    }
+  }
+
+  .ministers {
+    margin: 5rem 0;
+    min-height: 23.5rem;
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+
+      @include _1170 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include _768 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .slide {
+      &__photo {
+        background-position: top center;
+      }
+
+      &__date {
+        display: none;
+      }
+    }
+  }
+}

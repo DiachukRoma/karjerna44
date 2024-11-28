@@ -1,0 +1,140 @@
+@import 'vanilla-calendar-pro/build/vanilla-calendar.min.css';
+@import '../common/variables';
+@import '../layouts/header-sipmple-page';
+
+.content {
+  margin: 3rem 0;
+  min-height: calc(100vh - 54.125rem);
+
+  .container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 3.1rem;
+
+    @include _768 {
+      display: flex;
+      flex-flow: wrap;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__nav {
+    padding-left: 3.1rem;
+    border-left: 1px solid #22272e1a;
+
+    @include _768 {
+      padding-left: 0;
+      border-left: none;
+    }
+  }
+
+  &__data {
+    @include transition;
+  }
+
+  &-audio {
+    margin: 1.5rem 0;
+
+    &__infos {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.2rem;
+    }
+
+    &__info {
+      display: flex;
+      align-items: center;
+    }
+
+    &__img {
+      width: 4.75rem;
+      height: 4.75rem;
+      border-radius: 100%;
+    }
+
+    &__data {
+      margin-left: 1.5rem;
+    }
+
+    &__name {
+      color: $main;
+      font-size: 1rem;
+      letter-spacing: 0.05rem;
+      line-height: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    &__description {
+      margin: 0;
+      color: $light;
+      font-size: 0.875rem;
+      letter-spacing: 0.7px;
+    }
+
+    &__date {
+      background: $white;
+      text-align: center;
+      width: 3.75rem;
+      height: 3rem;
+      padding: 0.25rem 0;
+      box-shadow: 0 4px 15px 0 #0000001a;
+
+      &-day {
+        font-size: 1.25rem;
+        letter-spacing: 1px;
+        margin: 0;
+      }
+
+      &-mo {
+        color: #232323cc;
+        font-size: 0.625rem;
+        line-height: 120%;
+        letter-spacing: 0.0313rem;
+        margin: 0;
+      }
+    }
+
+    audio {
+      width: 100%;
+
+      &::-webkit-media-controls-panel {
+        background-color: $grey;
+      }
+    }
+  }
+
+  &__calendar {
+    margin-top: 2rem;
+    background-color: $grey;
+    padding: 0.75rem 0;
+    border-radius: 0.5rem;
+
+    .vanilla-calendar {
+      &-day__btn {
+        min-height: 2.5rem;
+        background-color: #f8f8f8 !important;
+
+        &_selected {
+          background-color: $grey !important;
+          color: $main;
+        }
+      }
+
+      &-header {
+        padding: 0 0.75rem;
+      }
+
+      &-years__year,
+      &-months__month,
+      &-day__btn {
+        background-color: #f8f8f8 !important;
+
+        &_selected {
+          background-color: $silver !important;
+        }
+      }
+    }
+  }
+}

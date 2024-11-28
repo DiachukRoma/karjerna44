@@ -1,0 +1,80 @@
+@import '../common/variables';
+
+.slide {
+  position: relative;
+
+  &__photo {
+    height: 340px;
+    display: block;
+    background-size: cover;
+    background-position: center center;
+
+    @include _1600 {
+      height: 300px;
+    }
+
+    @include _1440 {
+      height: 240px;
+    }
+
+    @include _768 {
+      height: 300px;
+    }
+
+    @include _600 {
+      height: 240px;
+    }
+  }
+
+  &__date {
+    background: $white;
+    text-align: center;
+    width: 3.75rem;
+    height: 2.75rem;
+    padding: 0.25rem 0;
+    position: absolute;
+    top: 0;
+    left: 1.125rem;
+
+    &-day {
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    &-mo {
+      color: #232323cc;
+      font-size: 0.625rem;
+      line-height: 120%;
+      letter-spacing: 0.0313rem;
+      margin: 0;
+    }
+  }
+
+  &__title {
+    color: $main;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    display: block;
+  }
+
+  &__tag {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    letter-spacing: 0.7px;
+  }
+
+  &__more {
+    color: $light;
+    font-size: 14px;
+
+    &:hover {
+      color: $global;
+    }
+  }
+}

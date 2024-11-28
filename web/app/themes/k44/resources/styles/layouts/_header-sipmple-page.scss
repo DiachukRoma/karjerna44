@@ -1,0 +1,77 @@
+@import '../common/variables';
+
+.top {
+  margin-top: 6rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  padding: 3.5rem 0 5rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #22272eb3;
+  }
+
+  &__title {
+    color: $white;
+    font-size: 2.5rem;
+    line-height: 137.5%;
+    text-transform: inherit;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  &__subtitle {
+    position: relative;
+    color: #fffc;
+    font-size: 1rem;
+    line-height: 120%;
+    letter-spacing: 0.7px;
+    max-width: 30rem;
+    margin: auto;
+  }
+
+  &__breadcrumbs {
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      display: inline-block;
+
+      &.kb-sep {
+        display: none;
+      }
+    }
+
+    a,
+    .kb {
+      &-title {
+        background: #333840;
+        padding: 0.625rem 1rem;
+        color: #ffffffb3;
+        font-size: 16px;
+        line-height: 137.5%;
+        letter-spacing: 0.8px;
+        white-space: nowrap;
+      }
+    }
+
+    .kb {
+      &-title {
+        color: $white;
+      }
+    }
+  }
+}

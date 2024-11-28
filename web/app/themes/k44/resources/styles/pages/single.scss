@@ -1,0 +1,32 @@
+@import '../common/variables';
+@import '../components/carousel';
+@import '../layouts/content-data';
+@import '../layouts/header-sipmple-page';
+
+body.single {
+  background: #f2f2f2;
+
+  .content {
+    margin: 4rem 0;
+    min-height: calc(100vh - 54.125rem);
+
+    .container {
+      max-width: 1440px;
+      display: block;
+
+      h3 {
+        font-size: 1.6rem;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+      }
+    }
+
+    .standart {
+      &__block-title {
+        padding: 2rem 0 1rem;
+      }
+    }
+  }
+}

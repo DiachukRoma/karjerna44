@@ -1,0 +1,138 @@
+
+@import "../layouts/header-sipmple-page";
+
+body {
+  background: $blue;
+  color: $white;
+
+  .top {
+    margin-top: 5.4rem;
+  }
+
+  .contacts {
+    background-color: $blue;
+    position: relative;
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+    color: $white;
+    overflow: hidden;
+
+    @include _768 {
+      margin-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .container {
+      position: relative;
+      z-index: 5;
+      max-width: 1280px;
+    }
+
+    &__title,
+    &__subtitle {
+      color: $white;
+    }
+
+    &::before {
+      content: "";
+      width: 68.5rem;
+      height: 68.5rem;
+      position: absolute;
+      top: -4.375rem;
+      left: 0;
+      background: url("../../images/home/contscts.png");
+      background-position: center center;
+      background-size: contain;
+      opacity: 0.02;
+    }
+
+    &__blocks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+
+      @include _768 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    &__contact {
+      letter-spacing: 0.8px;
+
+      &-title {
+        display: block;
+        margin-top: 1.5rem;
+      }
+
+      &-info {
+        font-size: 1rem;
+        color: $white;
+        opacity: 0.8;
+        display: block;
+        max-width: 12.875rem;
+      }
+
+      &-socials {
+        margin-top: 3rem;
+      }
+
+      a {
+        margin: 8px 0;
+      }
+    }
+
+    .btn {
+      background-color: #333840;
+      width: auto;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+
+      &:hover {
+        background-color: $silver;
+      }
+    }
+
+    .wpcf7 {
+      padding: 1.5rem;
+      background: #272c34;
+
+      label {
+        color: $white;
+        display: block;
+        margin-bottom: 1rem;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        background: #333840;
+        color: $white;
+        width: 100%;
+        min-height: 2.125rem;
+        border: 2px solid transparent;
+        margin-top: 5px;
+        resize: none;
+
+        &:focus,
+        &:focus-visible {
+          border-bottom: 2px solid #fff;
+          outline: none;
+        }
+      }
+
+      &-spinner {
+        margin: 5px 18px -7px;
+      }
+
+      &-form-control-wrap {
+        display: block;
+      }
+    }
+  }
+}
+
+#map {
+  height: 40rem;
+}

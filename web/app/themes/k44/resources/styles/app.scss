@@ -1,0 +1,14 @@
+/** Import variables */
+@import "common/variables";
+
+/** Globals */
+@import "common/global";
+@import "common/fonts";
+
+/** Import theme styles */
+@import "components/buttons";
+@import "components/forms";
+@import "components/search";
+@import "components/socials";
+@import "layouts/header";
+@import "layouts/footer";

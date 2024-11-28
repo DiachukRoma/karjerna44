@@ -1,0 +1,33 @@
+
+@import "../layouts/header-sipmple-page";
+
+body.songs {
+  .content {
+    margin: 4rem 0;
+    min-height: calc(100vh - 53rem);
+  }
+
+  .song {
+    padding: 1rem 0;
+    border-bottom: 1px solid $light;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+
+    &__name {
+      color: $main;
+      font-size: 1.4rem;
+      margin: 0;
+    }
+
+    &__full {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    &__text {
+      white-space: pre-line;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+
+@import "../layouts/header-sipmple-page";
+
+body {
+  background: #f2f2f2;
+}
+
+.content {
+  margin: 4rem 0;
+
+  .bfb {
+    padding: 3rem;
+    background-color: $white;
+    border-radius: 0.5rem;
+    color: $main;
+    font-size: 1rem;
+    line-height: 150%;
+    letter-spacing: 0.8px;
+
+    @include _768 {
+      padding: 1rem;
+
+      ul,
+      ol {
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    line-height: 1.4;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+}
+
+.container {
+  max-width: 1440px;
+}
