@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Contact Form 7 - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-07-18 09:51:00+0000\n"
+"PO-Revision-Date: 2025-06-26 17:41:08+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,40 +11,346 @@ msgstr ""
 "Language: uk_UA\n"
 "Project-Id-Version: Plugins - Contact Form 7 - Stable (latest release)\n"
 
-#: modules/checkbox.php:218
+#: modules/turnstile/service.php:280
+msgid "Cloudflare Turnstile integration"
+msgstr "Інтеграція Cloudflare Turnstile"
+
+#: modules/turnstile/service.php:40
+msgid "Turnstile"
+msgstr "Turnstile"
+
+#: modules/constant-contact/constant-contact.php:136
+msgid "The Constant Contact integration has been removed."
+msgstr "Інтеграцію з Constant Contact видалено."
+
+#: modules/constant-contact/constant-contact.php:113
+msgid "API configuration cleared."
+msgstr "API конфігурацію очищено."
+
+#. translators: %s: JSON-formatted array of disallowed HTML
+#: includes/html-formatter.php:470
+msgid "HTML Disallowance: %s"
+msgstr "Заборона HTML: %s"
+
+#. translators: %s: Invalid HTML tag name
+#: includes/html-formatter.php:426
+msgid "Invalid tag name (%s) is specified."
+msgstr "Зазначено невірне ім'я тегу (%s)."
+
+#: includes/filesystem.php:66
+msgid "Could not access filesystem."
+msgstr "Немає доступу до файлової системи."
+
+#: includes/contact-form-template.php:168
+msgid "Sender&#8217;s message failed to send"
+msgstr "Не вдалося надіслати повідомлення"
+
+#: admin/includes/welcome-panel.php:70 admin/includes/welcome-panel.php:165
+msgid "Cloudflare Turnstile"
+msgstr "Cloudflare Turnstile"
+
+#: admin/includes/welcome-panel.php:69 admin/includes/welcome-panel.php:164
+#: modules/turnstile/service.php:279
+msgid "https://contactform7.com/turnstile-integration/"
+msgstr "https://contactform7.com/turnstile-integration/"
+
+#: admin/admin.php:51 admin/admin.php:52 admin/admin.php:453
+#: admin/edit-contact-form.php:41 admin/edit-contact-form.php:54
+msgid "Add Contact Form"
+msgstr "Додати нову"
+
+#: modules/stripe/stripe.php:181
+msgid "Invalid Stripe Payment Intent ID detected."
+msgstr "Виявлено недійсний ідентифікатор Stripe Payment Intent."
+
+#: admin/includes/welcome-panel.php:102
+msgid "contribute to the project"
+msgstr "долучитися до проєкту"
+
+#: admin/includes/welcome-panel.php:101
+msgid "https://contactform7.com/contributing/"
+msgstr "https://contactform7.com/contributing/"
+
+#. translators: %s: link labeled 'contribute to the project'
+#: admin/includes/welcome-panel.php:99
+msgid "There are several ways for you to %s: testing, coding, translating it into your local languages, helping other users, financial donations, etc, etc. We equally welcome you regardless of the way you contribute."
+msgstr "Є кілька способів для вас %s: тестування, програмування, переклад на вашу рідну мову, допомога іншим користувачам, фінансова підтримка тощо. Ми однаково раді будь-якій вашій участі, незалежно від форми внеску."
+
+#: admin/includes/welcome-panel.php:96
+msgid "It is hard to continue to maintain this plugin without support from users like you."
+msgstr "Підтримувати цей плагін без допомоги таких користувачів, як ви, дуже складно."
+
+#: modules/textarea.php:154
+msgid "Generates a form-tag for a <a href=\"https://contactform7.com/text-fields/\">multi-line plain text input area</a>."
+msgstr "Створює тег форми для <a href=\"https://contactform7.com/text-fields/\">багаторядкового поля звичайного тексту</a>."
+
+#: modules/textarea.php:153
+msgid "Text area form-tag generator"
+msgstr "Генератор тегу форми для поля текстової області"
+
+#: modules/textarea.php:152
+msgid "Text area"
+msgstr "Текстова область"
+
+#: modules/text.php:250
+msgid "Generates a form-tag for a <a href=\"https://contactform7.com/text-fields/\">telephone number input field</a>."
+msgstr "Створює тег форми для <a href=\"https://contactform7.com/text-fields/\">поля введення номера телефону</a>."
+
+#: modules/text.php:249
+msgid "Telephone number field form-tag generator"
+msgstr "Генератор тегу форми для поля з номером телефону"
+
+#: modules/text.php:248
+msgid "Telephone number field"
+msgstr "Поле з номером телефону"
+
+#: modules/text.php:244
+msgid "Generates a form-tag for a <a href=\"https://contactform7.com/text-fields/\">URL input field</a>."
+msgstr "Створює тег форми для поля введення <a href=\"https://contactform7.com/text-fields/\">URL</a>."
+
+#: modules/text.php:243
+msgid "URL field form-tag generator"
+msgstr "Генератор тегу форми для поля URL"
+
+#: modules/text.php:242
+msgid "URL field"
+msgstr "Поле URL"
+
+#: modules/text.php:238
+msgid "Generates a form-tag for an <a href=\"https://contactform7.com/text-fields/\">email address input field</a>."
+msgstr "Створює тег форми для поля введення <a href=\"https://contactform7.com/text-fields/\">адреси електронної пошти</a>."
+
+#: modules/text.php:237
+msgid "Email address field form-tag generator"
+msgstr "Генератор тегу форми для поля email-адреси"
+
+#: modules/text.php:236
+msgid "Email address field"
+msgstr "Поле Email-адреси"
+
+#: modules/text.php:232
+msgid "Generates a form-tag for a <a href=\"https://contactform7.com/text-fields/\">single-line plain text input field</a>."
+msgstr "Створює тег форми для <a href=\"https://contactform7.com/text-fields/\">однорядкового поля введення простого тексту</a>."
+
+#: modules/text.php:231
+msgid "Text field form-tag generator"
+msgstr "Генератор тегу форми текстового поля"
+
+#: modules/submit.php:58
+msgid "Generates a form-tag for a <a href=\"https://contactform7.com/submit-button/\">submit button</a>."
+msgstr "Створює тег форми для <a href=\"https://contactform7.com/submit-button/\">кнопки Submit</a>."
+
+#: modules/submit.php:57
+msgid "Submit button form-tag generator"
+msgstr "Генератор тегу форми кнопки Відправки"
+
+#: modules/select.php:243
+msgid "Generates a form-tag for a <a href=\"https://contactform7.com/checkboxes-radio-buttons-and-menus/\">drop-down menu</a>."
+msgstr "Створює тег форми для <a href=\"https://contactform7.com/checkboxes-radio-buttons-and-menus/\">випадаючого меню</a>."
+
+#: modules/select.php:242
+msgid "Drop-down menu form-tag generator"
+msgstr "Генератор тегу форми для випадаючих меню"
+
+#: modules/select.php:241
+msgid "Drop-down menu"
+msgstr "Випадаюче меню"
+
+#: modules/quiz.php:283
+msgid "The capital of Brazil? | Rio"
+msgstr "Столиця Бразилії? | Ріо"
+
+#: modules/quiz.php:268
+msgid "One pipe-separated question-answer pair (question|answer) per line."
+msgstr "Одна розділена пара запитань-відповідей (запитання|відповідь) у рядку."
+
+#: modules/quiz.php:207
+msgid "Generates a form-tag for a <a href=\"https://contactform7.com/quiz/\">quiz</a>."
+msgstr "Створює тег форми для <a href=\"https://contactform7.com/quiz/\">вікторини</a>."
+
+#: modules/quiz.php:206
+msgid "Quiz form-tag generator"
+msgstr "Генератор тегу форми для вікторини"
+
+#: modules/number.php:215
+msgid "Generates a form-tag for a <a href=\"https://contactform7.com/number-fields/\">number input field</a>."
+msgstr "Створює тег форми для <a href=\"https://contactform7.com/number-fields/\">поля введення числа</a>."
+
+#: modules/number.php:214
+msgid "Number field form-tag generator"
+msgstr "Генератор тегу форми для числового поля"
+
+#: modules/file.php:255
+msgid "In bytes. You can use kb and mb suffixes."
+msgstr "В байтах. Ви можете використовувати kb і mb як суфікси."
+
+#: modules/file.php:243
+msgid "File size limit"
+msgstr "Ліміт розміру файлу"
+
+#: modules/file.php:217
+msgid "Pipe-separated file types list. You can use file extensions and MIME types."
+msgstr "Список типів файлів, розділених вертикальною рискою. Ви можете використовувати розширення файлів і MIME-типи."
+
+#: modules/file.php:153
+msgid "Generates a form-tag for a <a href=\"https://contactform7.com/file-uploading-and-attachment/\">file uploading field</a>."
+msgstr "Створює тег форми для <a href=\"https://contactform7.com/file-uploading-and-attachment/\">поля завантаження файлу</a>."
+
+#: modules/file.php:152
+msgid "File uploading field form-tag generator"
+msgstr "Генератор тегу форми для поля завантаження файлів"
+
+#: modules/file.php:151
+msgid "File uploading field"
+msgstr "Поле для завантаження файлу"
+
+#: modules/date.php:196
+msgid "Generates a form-tag for a <a href=\"https://contactform7.com/date-field/\">date input field</a>."
+msgstr "Створює тег форми для <a href=\"https://contactform7.com/date-field/\">поля введення дати</a>."
+
+#: modules/date.php:195
+msgid "Date field form-tag generator"
+msgstr "Генератор тегу форми для поля дати"
+
+#: modules/checkbox.php:373
+msgid "Generates a form-tag for a group of <a href=\"https://contactform7.com/checkboxes-radio-buttons-and-menus/\">radio buttons</a>."
+msgstr "Створює тег форми для групи <a href=\"https://contactform7.com/checkboxes-radio-buttons-and-menus/\">радіокнопок</a>."
+
+#: modules/checkbox.php:372
+msgid "Radio buttons form-tag generator"
+msgstr "Генератор тегу форми для радіокнопки"
+
+#: modules/checkbox.php:371
+msgid "Radio buttons"
+msgstr "Кнопки-перемикачі"
+
+#: modules/checkbox.php:368
+msgid "Generates a form-tag for a group of <a href=\"https://contactform7.com/checkboxes-radio-buttons-and-menus/\">checkboxes</a>."
+msgstr "Створює тег форми для групи <a href=\"https://contactform7.com/checkboxes-radio-buttons-and-menus/\">прапорців</a>."
+
+#: modules/checkbox.php:367
+msgid "Checkboxes form-tag generator"
+msgstr "Генератор тегу форми для прапорця"
+
+#: modules/checkbox.php:366
+msgid "Checkboxes"
+msgstr "Прапорці"
+
+#: modules/acceptance.php:328
+msgid "Put the condition for consent here."
+msgstr "Поставте умову згоди тут."
+
+#: admin/includes/tag-generator.php:270
+msgid "This checkbox is optional."
+msgstr "Цей прапорець є необов'язковим."
+
+#: modules/acceptance.php:268
+msgid "Generates a form-tag for an <a href=\"https://contactform7.com/acceptance-checkbox/\">acceptance checkbox</a>."
+msgstr "Створює тег форми для прапорця <a href=\"https://contactform7.com/acceptance-checkbox/\">прийняття</a>."
+
+#: modules/acceptance.php:267
+msgid "Acceptance checkbox form-tag generator"
+msgstr "Генератор тегу форми для прапорця прийняття"
+
+#. translators: %s: mail-tag corresponding to the form-tag
+#: admin/includes/tag-generator.php:620
+msgid "To use the user input in the email, insert the corresponding mail-tag %s into the email template."
+msgstr "Щоб використати введені користувачем дані в імейлі, вставте відповідний mail-тег %s у шаблон листа."
+
+#: admin/includes/tag-generator.php:587
+msgid "The form-tag to be inserted into the form template"
+msgstr "Тег форми, який потрібно вставити в шаблон форми"
+
+#: admin/includes/tag-generator.php:542
+msgid "Use the first item as a label."
+msgstr "Використовуйте перший елемент як ярлик."
+
+#: admin/includes/tag-generator.php:523
+msgid ""
+"Option 1\n"
+"Option 2\n"
+"Option 3"
+msgstr ""
+"Опція 1\n"
+"Опція 2\n"
+"Опція 3"
+
+#: admin/includes/tag-generator.php:508
+msgid "One item per line."
+msgstr "По одному елементу в рядку"
+
+#: admin/includes/tag-generator.php:498
+msgid "Selectable values"
+msgstr "Значення, які можна вибрати"
+
+#: admin/includes/tag-generator.php:472
+msgid "Use this text as the placeholder."
+msgstr "Використовувати цей текст як заповнювач"
+
+#: admin/includes/tag-generator.php:376 modules/text.php:304
+#: modules/textarea.php:199
+msgid "Length"
+msgstr "Довжина"
+
+#: admin/includes/tag-generator.php:322
+msgid "This field expects the submitter telephone number."
+msgstr "У цьому полі очікується номер телефону відправника."
+
+#: admin/includes/tag-generator.php:319
+msgid "This field expects the submitter URL."
+msgstr "У цьому полі очікується URL-адреса відправника."
+
+#: admin/includes/tag-generator.php:311
+msgid "This field expects the submitter email."
+msgstr "У цьому полі очікується email-адреса відправника."
+
+#: admin/includes/tag-generator.php:303
+msgid "This field expects the submitter name."
+msgstr "У цьому полі очікується ім'я відправника."
+
+#: admin/includes/tag-generator.php:289
+msgid "Field name"
+msgstr "Назва поля"
+
+#: admin/includes/tag-generator.php:252
+msgid "This is a required field."
+msgstr "Це обов'язкове для заповнення поле."
+
+#: admin/includes/tag-generator.php:137
+msgid "Close"
+msgstr "Закрити"
+
+#: admin/includes/tag-generator.php:132
+msgid "Close this dialog box"
+msgstr "Закрити поточне вікно"
+
+#. translators: 1: version, 2: tag generator title
+#: admin/includes/tag-generator.php:55
+msgid "Use of tag generator instances older than version 2 is deprecated. Version %1$s instance (%2$s) detected."
+msgstr "Використання екземплярів генератора тегів старіших за версію 2 є застарілим. Виявлено екземпляр версії %1$s (%2$s)."
+
+#: modules/checkbox.php:219
 msgid "Too many items are selected."
 msgstr "Вибрано занадто багато елементів."
 
-#: includes/contact-form.php:576
+#: includes/contact-form.php:572
 msgid "Invalid action URL is detected."
 msgstr "Виявлено невірний URL дії."
 
-#: modules/constant-contact/service.php:371
-msgid "This feature is deprecated. You are not recommended to use it."
-msgstr "Ця функція застаріла. Використовувати його не рекомендується."
-
-#: modules/constant-contact/service.php:370
+#: modules/constant-contact/constant-contact.php:135
 msgid "https://contactform7.com/2024/02/02/we-end-the-constant-contact-integration/"
 msgstr "https://contactform7.com/2024/02/02/we-end-the-constant-contact-integration/"
 
-#: modules/constant-contact/service.php:368
-msgid "Warning:"
-msgstr "Увага:"
-
-#: modules/checkbox.php:299 modules/select.php:217
+#: modules/checkbox.php:300 modules/select.php:217
 msgid "Undefined value was submitted through this field."
 msgstr "Через це поле було відправлено невизначене значення."
 
-#: admin/admin.php:693
-msgid "The Constant Contact integration is deprecated. It is not recommended to continue using the feature."
-msgstr "Інтеграція з Constant Contact є застарілою. Не рекомендується продовжувати використовувати цю функцію."
-
-#: includes/rest-api.php:360
+#: includes/rest-api.php:364
 msgid "There is no valid unit tag."
 msgstr "Немає дійсної позначки одиниці."
 
-#: modules/sendinblue/contact-form-properties.php:99
-#: modules/sendinblue/service.php:154
+#: modules/sendinblue/contact-form-properties.php:98
+#: modules/sendinblue/service.php:177
 msgid "Brevo integration"
 msgstr "Інтеграція Brevo"
 
@@ -63,30 +369,26 @@ msgstr "Це сповіщення про те, що на вашому веб-с�
 msgid "Unsafe email config is used without sufficient protection."
 msgstr "Використовується небезпечна конфігурація електронної пошти без достатнього захисту."
 
-#: includes/config-validator/validator.php:229
+#: includes/config-validator/validator.php:239
 msgid "Configuration error is detected."
 msgstr "Виявлено помилку конфігурації."
 
-#: modules/sendinblue/service.php:161
+#: modules/sendinblue/service.php:189
 msgid "Brevo is active on this site."
 msgstr "Brevo активований на цьому сайті."
 
-#: admin/includes/welcome-panel.php:153
-#: modules/sendinblue/contact-form-properties.php:107
-#: modules/sendinblue/contact-form-properties.php:295
+#: admin/includes/welcome-panel.php:157
+#: modules/sendinblue/contact-form-properties.php:110
+#: modules/sendinblue/contact-form-properties.php:405
 #: modules/sendinblue/service.php:30
 msgid "Brevo"
 msgstr "Brevo"
 
-#: admin/admin.php:675
-msgid "The next major release of Contact Form 7 will discontinue support for outdated PHP versions. If you don't upgrade PHP, you will not be able to upgrade the plugin."
-msgstr "Наступний великий випуск Contact Form 7 припинить підтримку застарілих версій PHP. Якщо ви не оновите PHP, ви не зможете оновити плагін."
-
-#: includes/contact-form-functions.php:264
+#: includes/contact-form-functions.php:271
 msgid "Contact form not found."
 msgstr "Contact form не знайдена."
 
-#: includes/contact-form-functions.php:263 includes/contact-form.php:575
+#: includes/contact-form-functions.php:270 includes/contact-form.php:571
 #: includes/js/index.js:1
 msgid "Error:"
 msgstr "Помилка:"
@@ -110,43 +412,43 @@ msgstr "Contact Form 7"
 msgid "&#8212;Please choose an option&#8212;"
 msgstr "&#8212;Виберіть варіант&#8212;"
 
-#: modules/akismet/service.php:65
+#: modules/akismet/service.php:77
 msgid "Akismet is active on this site."
 msgstr "Akismet активний на цьому сайті."
 
-#: modules/akismet/service.php:51
+#: modules/akismet/service.php:54
 msgid "CAPTCHAs are designed to distinguish spambots from humans, and are therefore helpless against human spammers. In contrast to CAPTCHAs, Akismet checks form submissions against the global database of spam; this means Akismet is a comprehensive solution against spam. This is why we consider Akismet to be the centerpiece of the spam prevention strategy."
 msgstr "CAPTCHAs призначені для того, щоб відрізнити спам-ботів від людей, тому вони безпорадні проти спамерів-людей. На відміну від CAPTCHAs, Akismet перевіряє відправлені форми за глобальною базою даних спаму. Це означає, що Akismet є комплексним рішенням проти спаму. Ось чому ми вважаємо Akismet центральним елементом стратегії запобігання спаму."
 
-#: modules/akismet/akismet.php:300
+#: modules/akismet/akismet.php:305
 msgid "Learn how your data is processed."
 msgstr "Дізнайтеся, як обробляються ваші дані."
 
-#: modules/akismet/akismet.php:297
+#: modules/akismet/akismet.php:302
 msgid "This form uses Akismet to reduce spam."
 msgstr "Ця форма використовує Akismet для зменшення спаму."
 
-#: includes/contact-form.php:648
+#: includes/contact-form.php:645
 msgid "Contact form"
 msgstr "Контактна форма"
 
 #: includes/config-validator/form.php:81
-msgid "Uploadable file size exceeds PHP’s maximum acceptable size."
-msgstr "Файл, що завантажується, перевищує допустимий розмір файла для вашої конфігурації PHP."
+msgid "Uploadable file size exceeds PHP&#8217;s maximum acceptable size."
+msgstr "Розмір файлу для завантаження перевищує максимально дозволений PHP."
 
 #: includes/config-validator/form.php:69
 msgid "Colons are used in form-tag names."
 msgstr "Двокрапки використовуються в іменах тегів форм."
 
-#: modules/text.php:196
+#: modules/text.php:197
 msgid "Please enter a telephone number."
 msgstr "Будь ласка, введіть номер телефону."
 
-#: modules/text.php:189
+#: modules/text.php:190
 msgid "Please enter a URL."
 msgstr "Будь ласка, введіть URL."
 
-#: modules/text.php:182
+#: modules/text.php:183
 msgid "Please enter an email address."
 msgstr "Будь ласка, введіть адресу електронної пошти."
 
@@ -174,34 +476,34 @@ msgstr "Це поле має занадто ранню дату."
 msgid "Please enter a date in YYYY-MM-DD format."
 msgstr "Введіть дату у форматі YYYY-MM-DD."
 
-#: includes/rest-api.php:334
+#: includes/rest-api.php:338
 msgid "The request payload format is not supported."
 msgstr "Формат запиту payload не підтримується."
 
 #. translators: 1: WordPress hook name, 2: version number
-#: includes/functions.php:575
+#: includes/functions.php:536
 msgid "Hook %1$s is <strong>deprecated</strong> since Contact Form 7 version %2$s with no alternative available."
 msgstr "Хук %1$s Contact Form 7 <strong>не підтримується</strong> починаючи з версії %2$s без альтернативи."
 
-#: includes/file.php:113
+#: includes/file.php:116
 msgid "The uploaded file is too large."
 msgstr "Завантажений файл завеликий."
 
-#: includes/contact-form-template.php:215
+#: includes/contact-form-template.php:199
 msgid "This field has a too short input."
 msgstr "Це поле містить занадто короткі дані."
 
-#: includes/contact-form-template.php:208
+#: includes/contact-form-template.php:194
 msgid "This field has a too long input."
 msgstr "Це поле містить занадто довгі дані."
 
-#: includes/contact-form-template.php:201
+#: includes/contact-form-template.php:189
 msgid "Please fill out this field."
 msgstr "Будь ласка, заповніть це поле."
 
 #. translators: 1: PHP function name, 2: version number, 3: alternative
 #. function name
-#: includes/functions.php:526
+#: includes/functions.php:492
 msgid "Function %1$s is <strong>deprecated</strong> since Contact Form 7 version %2$s! Use %3$s instead."
 msgstr "Функція %1$s Contact Form 7 <strong>не підтримується</strong> починаючи з версії %2$s! Натомість використовуйте %3$s."
 
@@ -211,12 +513,12 @@ msgstr "Захист від спаму"
 
 #. translators: Developer debugging message. 1: PHP function name, 2:
 #. Explanatory message, 3: Contact Form 7 version number.
-#: includes/functions.php:610
+#: includes/functions.php:576
 msgid "Function %1$s was called incorrectly. %2$s %3$s"
 msgstr "Функцію %1$s було викликано неправильно. %2$s %3$s"
 
 #. translators: 1: blog name, 2: confirmation link
-#: modules/constant-contact/doi.php:76 modules/sendinblue/doi.php:84
+#: modules/sendinblue/doi.php:84
 msgid ""
 "Hello,\n"
 "\n"
@@ -245,23 +547,19 @@ msgstr ""
 "%1$s"
 
 #. translators: %s: blog name
-#: modules/constant-contact/doi.php:70 modules/sendinblue/doi.php:78
+#: modules/sendinblue/doi.php:78
 msgid "Opt-in confirmation from %s"
 msgstr "Підтвердження від %s"
 
-#: modules/constant-contact/contact-form-properties.php:162
-msgid "You can set up the Constant Contact integration here. For details, see %s."
-msgstr "Ви можете налаштувати інтеграцію з Constant Contact тут. Щоб отримати додаткові відомості, див. розділ %s."
-
-#: modules/stripe/stripe.php:320
+#: modules/stripe/stripe.php:380
 msgid "Complete payment"
 msgstr "Завершити платіж"
 
-#: modules/stripe/stripe.php:305
+#: modules/stripe/stripe.php:365
 msgid "Proceed to checkout"
 msgstr "Приступити до оформлення замовлення"
 
-#: modules/stripe/stripe.php:189
+#: modules/stripe/stripe.php:249
 msgid "Payment is required. Please pay by credit card."
 msgstr "Оплата обов'язкова. Будь ласка, оплатіть кредитною карткою."
 
@@ -269,25 +567,21 @@ msgstr "Оплата обов'язкова. Будь ласка, оплатіт�
 msgid "Payments"
 msgstr "Платежі"
 
-#: modules/stripe/service.php:211
+#: modules/stripe/service.php:256
 msgid "Publishable Key"
 msgstr "Публікований ключ"
 
-#: modules/stripe/service.php:188
+#: modules/stripe/service.php:229
 msgid "Stripe is not available on this site. It requires an HTTPS-enabled site."
 msgstr "Stripe недоступний на цьому сайті. Для цього потрібно сайт з підтримкою HTTPS."
 
-#: modules/stripe/service.php:173
+#: modules/stripe/service.php:200
 msgid "Stripe is active on this site."
 msgstr "Stripe активований на цьому сайті."
 
-#: modules/stripe/service.php:166
+#: modules/stripe/service.php:188
 msgid "Stripe integration"
 msgstr "Інтеграція Stripe"
-
-#: modules/stripe/service.php:159
-msgid "Stripe is a simple and powerful way to accept payments online. Stripe has no setup fees, no monthly fees, and no hidden costs. Millions of businesses rely on Stripe’s software tools to accept payments securely and expand globally."
-msgstr "Stripe - це простий і потужний спосіб прийому платежів в Інтернеті. У Stripe немає плати за установку, немає щомісячних платежів і немає прихованих витрат. Мільйони підприємств покладаються на програмні інструменти Stripe для безпечного прийому платежів і глобального розширення."
 
 #. translators: 1: first name, 2: last name
 #: modules/sendinblue/sendinblue.php:114
@@ -295,7 +589,7 @@ msgctxt "personal name"
 msgid "%1$s %2$s"
 msgstr "%1$s %2$s"
 
-#: includes/rest-api.php:513
+#: includes/rest-api.php:517
 msgid "Unique identifier for the contact form."
 msgstr "Унікальний ідентифікатор для контактної форми."
 
@@ -303,152 +597,148 @@ msgstr "Унікальний ідентифікатор для контактн�
 msgid "Dots are used in form-tag names."
 msgstr "Точки використовуються в назвах міток форми."
 
-#: admin/includes/welcome-panel.php:299
+#: admin/includes/welcome-panel.php:305
 msgid "Show welcome panel"
 msgstr "Показати панель привітання"
 
-#: admin/includes/welcome-panel.php:296
+#: admin/includes/welcome-panel.php:302
 msgid "Welcome panel"
 msgstr "Вітальна панель"
 
-#: admin/includes/welcome-panel.php:165 modules/stripe/service.php:36
+#: admin/includes/welcome-panel.php:169 modules/stripe/service.php:38
 msgid "Stripe"
 msgstr "Stripe"
 
-#: admin/includes/welcome-panel.php:164 modules/stripe/service.php:165
+#: admin/includes/welcome-panel.php:168 modules/stripe/service.php:187
 msgid "https://contactform7.com/stripe-integration/"
 msgstr "https://contactform7.com/stripe-integration/"
 
-#. translators: 1: link labeled 'reCAPTCHA', 2: link labeled 'Stripe'
-#: admin/includes/welcome-panel.php:158
+#. translators: 1: link labeled 'Cloudflare Turnstile', 2: link labeled
+#. 'Stripe'
+#: admin/includes/welcome-panel.php:162
 msgid "With help from cloud-based machine learning, anti-spam services will protect your forms (%1$s). Even payment services are natively supported (%2$s)."
 msgstr "За допомогою хмарного машинного навчання служби захисту від спаму захистять ваші форми (%1$s). Підтримуються навіть платіжні сервіси (%2$s)."
 
 #. translators: 1: link labeled 'Brevo'
-#: admin/includes/welcome-panel.php:150
+#: admin/includes/welcome-panel.php:154
 msgid "Your contact forms will become more powerful and versatile by integrating them with external APIs. With CRM and email marketing services, you can build your own contact lists (%1$s)."
 msgstr "Ваші контактні форми стануть потужнішими та більш універсальними, інтегруючи їх зовнішніми API. За допомогою CRM та сервісів електронної розсилки, ви можете створити свої власні переліки контактів (%1$s)."
 
-#: admin/includes/welcome-panel.php:142
+#: admin/includes/welcome-panel.php:146
 msgid "You have strong allies to back you up."
 msgstr "У вас є сильні союзники, які вас підтримують."
 
-#: admin/admin.php:494
+#: admin/admin.php:589
 msgid "Integration with external APIs"
 msgstr "Інтеграція з зовнішніми API"
 
-#: admin/admin.php:493
+#: admin/admin.php:588
 msgid "https://contactform7.com/integration-with-external-apis/"
 msgstr "https://contactform7.com/integration-with-external-apis/"
 
 #. translators: %s: link labeled 'Integration with external APIs'
-#: admin/admin.php:491
+#: admin/admin.php:586
 msgid "You can expand the possibilities of your contact forms by integrating them with external services. For details, see %s."
 msgstr "Ви можете розширити можливості ваших контактних форм, інтегрувавши їх із зовнішніми сервісами. Детальніше див. %s."
 
-#: admin/admin.php:65 admin/admin.php:486
+#: admin/admin.php:65 admin/admin.php:576
 msgid "Integration with External API"
 msgstr "Інтеграція із зовнішнім API"
 
-#: modules/sendinblue/contact-form-properties.php:280
+#: modules/sendinblue/contact-form-properties.php:374
 msgid "Manage your email templates"
 msgstr "Керуйте шаблонами електронної пошти"
 
-#: modules/sendinblue/contact-form-properties.php:265
+#: modules/sendinblue/contact-form-properties.php:357
 msgid "You have no active email template yet."
 msgstr "У вас ще немає активного шаблону електронної пошти."
 
-#: modules/sendinblue/contact-form-properties.php:247
+#: modules/sendinblue/contact-form-properties.php:335
 msgid "&mdash; Select &mdash;"
 msgstr "&mdash; Вибрати &mdash;"
 
-#: modules/sendinblue/contact-form-properties.php:236
+#: modules/sendinblue/contact-form-properties.php:320
 msgid "Select an email template:"
 msgstr "Виберіть шаблон email:"
 
-#: modules/sendinblue/contact-form-properties.php:219
+#: modules/sendinblue/contact-form-properties.php:299
 msgid "Send a welcome email to new contacts"
 msgstr "Надішліть вітальний лист новим контактам"
 
-#: modules/sendinblue/contact-form-properties.php:201
-#: modules/sendinblue/contact-form-properties.php:210
+#: modules/sendinblue/contact-form-properties.php:269
+#: modules/sendinblue/contact-form-properties.php:281
 msgid "Welcome email"
 msgstr "Лист привітання"
 
-#: modules/constant-contact/contact-form-properties.php:257
-#: modules/sendinblue/contact-form-properties.php:191
-#: modules/sendinblue/contact-form-properties.php:281
+#: modules/sendinblue/contact-form-properties.php:246
+#: modules/sendinblue/contact-form-properties.php:384
 msgid "(opens in a new tab)"
 msgstr "(відкривати в новій вкладці)"
 
-#: modules/constant-contact/contact-form-properties.php:256
-#: modules/sendinblue/contact-form-properties.php:190
+#: modules/sendinblue/contact-form-properties.php:236
 msgid "Manage your contact lists"
 msgstr "Керуйте своїми списками контактів"
 
-#: modules/constant-contact/contact-form-properties.php:241
-#: modules/sendinblue/contact-form-properties.php:175
+#: modules/sendinblue/contact-form-properties.php:219
 msgid "You have no contact list yet."
 msgstr "У вас ще немає списку контактів."
 
-#: modules/constant-contact/contact-form-properties.php:219
-#: modules/sendinblue/contact-form-properties.php:153
+#: modules/sendinblue/contact-form-properties.php:188
 msgid "Select lists to which contacts are added:"
 msgstr "Виберіть списки, до яких додаються контакти:"
 
-#: modules/constant-contact/contact-form-properties.php:202
-#: modules/sendinblue/contact-form-properties.php:136
+#: modules/sendinblue/contact-form-properties.php:169
 msgid "Add form submitters to your contact lists"
 msgstr "Додайте відправників форм у свої списки контактів"
 
-#: modules/constant-contact/contact-form-properties.php:184
-#: modules/constant-contact/contact-form-properties.php:193
-#: modules/sendinblue/contact-form-properties.php:118
-#: modules/sendinblue/contact-form-properties.php:127
+#: modules/sendinblue/contact-form-properties.php:139
+#: modules/sendinblue/contact-form-properties.php:151
 msgid "Contact lists"
 msgstr "Списки контактів"
 
-#: modules/sendinblue/contact-form-properties.php:95
+#. translators: %s: link labeled 'Brevo integration'
+#: modules/sendinblue/contact-form-properties.php:94
 msgid "You can set up the Brevo integration here. For details, see %s."
 msgstr "Ви можете налаштувати інтеграцію з Brevo тут. Щоб отримати додаткові відомості, див. розділ %s."
 
-#: modules/sendinblue/service.php:210
+#: modules/sendinblue/service.php:251
 msgid "Save changes"
 msgstr "Зберегти зміни"
 
-#: modules/sendinblue/service.php:206
+#: modules/sendinblue/service.php:247
 msgctxt "API keys"
 msgid "Remove key"
 msgstr "Видалити ключ"
 
-#: modules/sendinblue/service.php:185
+#: modules/sendinblue/service.php:226
 msgid "API key"
 msgstr "API ключ"
 
-#: modules/sendinblue/service.php:171
+#: modules/recaptcha/service.php:335 modules/sendinblue/service.php:208
+#: modules/turnstile/service.php:311
 msgid "Setup integration"
 msgstr "Налаштування інтеграції"
 
-#: admin/includes/welcome-panel.php:152
-#: modules/sendinblue/contact-form-properties.php:98
-#: modules/sendinblue/service.php:153
+#: admin/includes/welcome-panel.php:156
+#: modules/sendinblue/contact-form-properties.php:97
+#: modules/sendinblue/service.php:176
 msgid "https://contactform7.com/sendinblue-integration/"
 msgstr "https://contactform7.com/sendinblue-integration/"
 
-#: modules/sendinblue/service.php:147
+#: modules/sendinblue/service.php:166
 msgid "Store and organize your contacts while protecting user privacy on Brevo, the leading CRM & email marketing platform in Europe. Brevo offers unlimited contacts and advanced marketing features."
 msgstr "Зберігайте та організуйте свої контакти, захищаючи конфіденційність користувачів на Sendinblue, провідній платформі CRM та електронного маркетингу в Європі. Sendinblue пропонує необмежену кількість контактів і розширені маркетингові функції."
 
-#: modules/sendinblue/service.php:124
+#: modules/sendinblue/service.php:128
 msgid "You have not been authenticated. Make sure the provided API key is correct."
 msgstr "Ви не пройшли перевірку автентичності. Переконайтеся, що наданий ключ API правильний."
 
-#: includes/mail.php:313
+#: includes/mail.php:311
 msgid "Failed to attach a file. The total file size exceeds the limit of 25 megabytes."
 msgstr "Не вдалося прикріпити файл. Загальний розмір файлу перевищує обмеження в 25 мегабайт."
 
 #. translators: %s: Attachment file path.
-#: includes/mail.php:292
+#: includes/mail.php:291
 msgid "Failed to attach a file. %s is not a readable file."
 msgstr "Не вдалося прикріпити файл. Файл %s не читається."
 
@@ -465,11 +755,12 @@ msgstr "Відправити"
 msgid "(optional)"
 msgstr "(необов'язково)"
 
-#: admin/includes/welcome-panel.php:69
+#: admin/includes/welcome-panel.php:74
 msgid "disallowed list"
 msgstr "заборонений список"
 
-#: modules/disallowed-list.php:35
+#. translators: %s: comma separated list of disallowed words
+#: modules/disallowed-list.php:36
 msgid "Disallowed words (%s) are used."
 msgstr "Використовуються заборонені слова (%s)."
 
@@ -478,42 +769,41 @@ msgid "Disallowed words are used."
 msgstr "Використовуються заборонені слова."
 
 #. translators: %s: Contact Form 7 version number.
-#: includes/functions.php:602
+#: includes/functions.php:567
 msgid "(This message was added in Contact Form 7 version %s.)"
 msgstr "(Це повідомлення було додано до Contact Form 7 версії %s.)"
 
-#: includes/special-mail-tags.php:22 includes/special-mail-tags.php:96
-#: includes/special-mail-tags.php:162 includes/special-mail-tags.php:216
+#: includes/special-mail-tags.php:22 includes/special-mail-tags.php:104
+#: includes/special-mail-tags.php:170 includes/special-mail-tags.php:239
 #: modules/flamingo.php:304
 msgid "The fourth parameter ($mail_tag) must be an instance of the WPCF7_MailTag class."
 msgstr "Четвертий параметр ($mail_tag) повинен налажети до класу WPCF7_MailTag."
 
 #. translators: time format, see https://www.php.net/date
-#: admin/includes/class-contact-forms-list-table.php:238
+#: admin/includes/class-contact-forms-list-table.php:231
 msgid "g:i a"
 msgstr "H:i"
 
 #. translators: 1: date, 2: time
-#: admin/includes/class-contact-forms-list-table.php:234
+#: admin/includes/class-contact-forms-list-table.php:227
 msgid "%1$s at %2$s"
 msgstr "%1$s о %2$s"
 
-#: admin/edit-contact-form.php:196
+#: admin/edit-contact-form.php:373
 msgid "docs"
 msgstr "документація"
 
 #. translators: 1: FAQ, 2: Docs ("FAQ & Docs")
-#: admin/edit-contact-form.php:189
+#: admin/edit-contact-form.php:366
 msgid "%1$s and %2$s"
 msgstr "%1$s та %2$s"
 
-#: admin/includes/editor.php:252
+#: admin/includes/editor.php:527
 msgid "Additional settings"
 msgstr "Додаткові налаштування"
 
-#: modules/constant-contact/service.php:352 modules/recaptcha/service.php:260
-#: modules/sendinblue/service.php:123 modules/sendinblue/service.php:131
-#: modules/stripe/service.php:141
+#: modules/recaptcha/service.php:264 modules/sendinblue/service.php:127
+#: modules/sendinblue/service.php:138 modules/stripe/service.php:148
 msgid "Error"
 msgstr "Помилка"
 
@@ -525,7 +815,7 @@ msgstr "Загальний розмір файлів вкладень занад
 msgid "Unavailable HTML elements are used in the form template."
 msgstr "У шаблоні форми використовуються недоступні елементи HTML."
 
-#: modules/recaptcha/service.php:288
+#: modules/recaptcha/service.php:316
 msgid "reCAPTCHA is active on this site."
 msgstr "reCAPTCHA активна на цьому сайті."
 
@@ -533,15 +823,16 @@ msgstr "reCAPTCHA активна на цьому сайті."
 msgid "reCAPTCHA response token is empty."
 msgstr "Поле токена відповіді reCAPTCHA не заповнено."
 
-#: includes/submission.php:657
+#: includes/submission.php:660
 msgid "Submitted nonce is invalid."
 msgstr "Відправлений код nonce невірний."
 
-#: includes/submission.php:648
+#: includes/submission.php:651
 msgid "User-Agent string is unnaturally short."
 msgstr "Рядок User-Agent неприродно короткий."
 
-#: modules/recaptcha/recaptcha.php:157
+#. translators: 1: value of reCAPTCHA score 2: value of reCAPTCHA threshold
+#: modules/recaptcha/recaptcha.php:155
 msgid "reCAPTCHA score (%1$.2f) is lower than the threshold (%2$.2f)."
 msgstr "Оцінка reCAPTCHA (%1$.2f) нижче порогового значення (%2$.2f)."
 
@@ -549,95 +840,49 @@ msgstr "Оцінка reCAPTCHA (%1$.2f) нижче порогового знач
 msgid "Akismet returns a spam response."
 msgstr "Akismet повернув статус спаму."
 
-#: modules/constant-contact/service.php:462
-msgctxt "API keys"
-msgid "Reset Keys"
-msgstr "Скинути ключі"
-
-#: modules/constant-contact/service.php:391
-msgid "This site is connected to the Constant Contact API."
-msgstr "Цей сайт підключений до API Constant Contact."
-
-#: modules/constant-contact/service.php:359
-msgid "Configuration updated."
-msgstr "Конфігурацію оновлено."
-
-#: modules/constant-contact/service.php:353
-msgid "Failed to establish connection. Please double-check your configuration."
-msgstr "Не вдалося встановити з'єднання. Будь ласка, перевірте вашу конфігурацію."
-
-#: modules/constant-contact/service.php:346
-msgid "Connection established."
-msgstr "З'єднання встановлено."
-
 #. translators: 1: response code, 2: message, 3: body, 4: URL
-#: includes/functions.php:649
+#: includes/functions.php:620
 msgid "HTTP Response: %1$s %2$s %3$s from %4$s"
 msgstr "HTTP-відповідь: %1$s %2$s %3$s з %4$s"
 
-#: modules/recaptcha/service.php:360 modules/stripe/service.php:253
+#: modules/recaptcha/service.php:401 modules/stripe/service.php:298
+#: modules/turnstile/service.php:376
 msgid "Save Changes"
 msgstr "Зберегти зміни"
 
-#: modules/recaptcha/service.php:274
+#: modules/recaptcha/service.php:293
 msgid "reCAPTCHA protects you against spam and other types of automated abuse. With Contact Form 7&#8217;s reCAPTCHA integration module, you can block abusive form submissions by spam bots."
 msgstr "reCAPTCHA захищає вас від спаму і іншого роду автоматичних зловживань повідомленнями. З модулем інтеграції reCAPTCHA в Contact Form 7 можна блокувати спроби зловживання формою зв'язку спам-ботами."
 
-#: modules/recaptcha/recaptcha.php:261 modules/recaptcha/service.php:281
+#: modules/recaptcha/recaptcha.php:255 modules/recaptcha/service.php:304
 msgid "reCAPTCHA (v3)"
 msgstr "reCAPTCHA (v3)"
 
-#: modules/recaptcha/recaptcha.php:255
+#. translators: %s: link labeled 'reCAPTCHA (v3)'
+#: modules/recaptcha/recaptcha.php:252
 msgid "API keys for reCAPTCHA v3 are different from those for v2; keys for v2 do not work with the v3 API. You need to register your sites again to get new keys for v3. For details, see %s."
 msgstr "API-ключі для reCAPTCHA v3 відрізняються від v2; ключі v2 не працюють з API v3. Вам слід зареєструвати свій сайт повторно та отримати ключі v3. Подробиці тут: %s."
 
-#: modules/constant-contact/service.php:467
-msgid "Connect to the Constant Contact API"
-msgstr "Підключення до Constant Contact API"
-
-#: modules/recaptcha/service.php:355 modules/stripe/service.php:249
+#: modules/constant-contact/constant-contact.php:206
+#: modules/recaptcha/service.php:396 modules/stripe/service.php:294
+#: modules/turnstile/service.php:372
 msgctxt "API keys"
 msgid "Remove Keys"
 msgstr "Видалення ключів"
 
-#: modules/constant-contact/service.php:454
-msgid "Set this URL as the redirect URI."
-msgstr "Встановити цей URL як URI перенаправлення."
-
-#: modules/constant-contact/service.php:447
-msgid "Redirect URI"
-msgstr "URI перенаправлення"
-
-#: modules/constant-contact/service.php:430
+#: modules/constant-contact/constant-contact.php:191
 msgid "App Secret"
 msgstr "Секрет застосунку"
 
-#: modules/constant-contact/service.php:413
+#: modules/constant-contact/constant-contact.php:169
 msgid "API Key"
 msgstr "API ключ"
 
-#: modules/constant-contact/service.php:401 modules/recaptcha/service.php:298
-#: modules/stripe/service.php:183
+#: modules/stripe/service.php:219
 msgid "Setup Integration"
 msgstr "Налаштування інтеграції"
 
-#: modules/constant-contact/contact-form-properties.php:166
-#: modules/constant-contact/service.php:384
-msgid "Constant Contact integration"
-msgstr "Інтеграція Constant Contact"
-
-#: modules/constant-contact/contact-form-properties.php:165
-#: modules/constant-contact/service.php:383
-msgid "https://contactform7.com/constant-contact-integration/"
-msgstr "https://contactform7.com/constant-contact-integration/"
-
-#: modules/constant-contact/service.php:377
-msgid "The Constant Contact integration module allows you to send contact data collected through your contact forms to the Constant Contact API. You can create reliable email subscription services in a few easy steps."
-msgstr "Модуль інтеграції Constant Contact дозволяє відправляти контактні дані, зібрані за допомогою ваших контактних форм, в API Constant Contact. Ви можете створити надійні послуги підписки по електронній пошті в кілька простих кроків."
-
-#: modules/constant-contact/contact-form-properties.php:173
-#: modules/constant-contact/contact-form-properties.php:271
-#: modules/constant-contact/service.php:105
+#: modules/constant-contact/constant-contact.php:56
 msgid "Constant Contact"
 msgstr "Constant Contact"
 
@@ -649,49 +894,45 @@ msgstr "Email-маркетинг"
 msgid "It is not allowed to use files outside the wp-content directory."
 msgstr "Забороняється використовувати файли поза каталогом wp-content."
 
-#: modules/acceptance.php:279
-msgid "Make this checkbox optional"
-msgstr "Зробіть цей прапорець необов'язковим"
-
-#: admin/edit-contact-form.php:205
+#: admin/edit-contact-form.php:392
 msgid "Professional services"
 msgstr "Професійний сервіс"
 
-#: admin/edit-contact-form.php:204
+#: admin/edit-contact-form.php:391
 msgid "https://contactform7.com/custom-development/"
 msgstr "https://contactform7.com/custom-development/"
 
-#: admin/edit-contact-form.php:201
+#: admin/edit-contact-form.php:383
 msgid "Support forums"
 msgstr "Форуми підтримки"
 
-#: admin/edit-contact-form.php:200
+#: admin/edit-contact-form.php:382
 msgid "https://wordpress.org/support/plugin/contact-form-7/"
 msgstr "https://wordpress.org/support/plugin/contact-form-7/"
 
-#: admin/edit-contact-form.php:185
+#: admin/edit-contact-form.php:354
 msgid "Here are some available options to help solve your problems."
 msgstr "Ось декілька доступних варіантів, які допоможуть вирішити ваші проблеми."
 
-#: admin/edit-contact-form.php:183
+#: admin/edit-contact-form.php:342
 msgid "Do you need help?"
 msgstr "Потрібна допомога?"
 
-#: modules/acceptance.php:270
+#: modules/acceptance.php:320
 msgid "Condition"
 msgstr "Умови"
 
 #. translators: 1: 'Consented' or 'Not consented', 2: conditions
-#: modules/acceptance.php:228
+#: modules/acceptance.php:240
 msgctxt "mail output for acceptance checkboxes"
 msgid "%1$s: %2$s"
 msgstr "%1$s: %2$s"
 
-#: modules/acceptance.php:212
+#: modules/acceptance.php:224
 msgid "Not consented"
 msgstr "Не погоджено"
 
-#: modules/acceptance.php:210
+#: modules/acceptance.php:222
 msgid "Consented"
 msgstr "Погоджено"
 
@@ -699,71 +940,38 @@ msgstr "Погоджено"
 msgid "Sending mail has been aborted."
 msgstr "Відправка пошти була перервана."
 
-#: admin/includes/editor.php:216
+#. translators: %s: link labeled 'Editing messages'
+#: admin/includes/editor.php:460
 msgid "You can edit messages used in various situations here. For details, see %s."
 msgstr "Тут можна редагувати повідомлення, що використовуються в різних ситуаціях. Докладніше дивіться тут %s."
 
-#: admin/includes/editor.php:215
+#: admin/includes/editor.php:463
 msgid "Editing messages"
 msgstr "Редагування повідомлень"
 
-#: admin/includes/editor.php:214
+#: admin/includes/editor.php:462
 msgid "https://contactform7.com/editing-messages/"
 msgstr "https://contactform7.com/editing-messages/"
 
-#: admin/includes/editor.php:135
+#. translators: %s: link labeled 'Setting up mail'
+#: admin/includes/editor.php:205
 msgid "You can edit the mail template here. For details, see %s."
 msgstr "Тут ви можете редагувати шаблон пошти. Докладніше дивіться тут %s."
 
-#: admin/includes/editor.php:62
+#. translators: %s: link labeled 'Editing form template'
+#: admin/includes/editor.php:81
 msgid "You can edit the form template here. For details, see %s."
 msgstr "Тут ви можете редагувати шаблон форми. Докладніше дивіться тут %s."
 
-#: admin/includes/editor.php:61
+#: admin/includes/editor.php:84
 msgid "Editing form template"
 msgstr "Редагування шаблону форми"
 
-#: admin/includes/editor.php:60
+#: admin/includes/editor.php:83
 msgid "https://contactform7.com/editing-form-template/"
 msgstr "https://contactform7.com/editing-form-template/"
 
-#. translators: screen reader text
-#: admin/edit-contact-form.php:223
-msgid "(left and right arrow)"
-msgstr "(ліва та права стрілка)"
-
-#. translators: 1: ◀ ▶ dashicon, 2: screen reader text for the dashicon
-#: admin/edit-contact-form.php:218
-msgid "%1$s %2$s keys switch panels"
-msgstr "%1$s %2$s ключі що перемикають панелі"
-
-#. translators: screen reader text
-#: admin/admin.php:158
-msgid "(configuration error)"
-msgstr "(помилка конфігурації)"
-
-#: admin/admin.php:151
-msgid "How to resolve?"
-msgstr "Як вирішити?"
-
-#: admin/includes/welcome-panel.php:100
-msgid "Your donation will help encourage and support the plugin&#8217;s continued development and better user support."
-msgstr "Ваш пожертвування допоможе заохотити та підтримувати подальший розвиток плагіна та надати кращу підтримку користувачів."
-
-#: admin/includes/welcome-panel.php:97
-msgid "making a donation"
-msgstr "зробити пожертву"
-
-#. translators: %s: link labeled 'making a donation'
-#: admin/includes/welcome-panel.php:94
-msgid "If you enjoy using Contact Form 7 and find it useful, please consider %s."
-msgstr "Якщо вам подобається користуватися Contact Form 7 і вона вам корисна, будь ласка, обміркуйте %s."
-
-#: admin/includes/welcome-panel.php:91
-msgid "It is hard to continue development and support for this plugin without contributions from users like you."
-msgstr "Важко продовжувати розробку та підтримку цього плагіну без внеску таких користувачів, як ви."
-
-#: includes/contact-form.php:543 includes/contact-form.php:1065
+#: includes/contact-form.php:546 includes/contact-form.php:1069
 msgid "This contact form is available only for logged in users."
 msgstr "Ця форма доступна тільки для зареєстрованих користувачів."
 
@@ -776,7 +984,7 @@ msgstr "Використовуються застарілі налаштуван
 msgid "To use CAPTCHA, you need %s plugin installed."
 msgstr "Для використання CAPTCHA потрібно встановити плагін %s."
 
-#: includes/rest-api.php:319
+#: includes/rest-api.php:323
 msgid "There was an error deleting the contact form."
 msgstr "Помилка при видаленні контактної форми."
 
@@ -784,9 +992,9 @@ msgstr "Помилка при видаленні контактної форми
 msgid "You are not allowed to access the requested contact form."
 msgstr "У вас немає доступу до запитаної контактної форми."
 
-#: includes/rest-api.php:243 includes/rest-api.php:265
-#: includes/rest-api.php:310 includes/rest-api.php:349
-#: includes/rest-api.php:421 includes/rest-api.php:440
+#: includes/rest-api.php:245 includes/rest-api.php:267
+#: includes/rest-api.php:314 includes/rest-api.php:353
+#: includes/rest-api.php:425 includes/rest-api.php:444
 msgid "The requested contact form was not found."
 msgstr "Запитана контактна форма не знайдена."
 
@@ -838,71 +1046,49 @@ msgid "There is a possible empty field."
 msgstr "Ймовірно є пусте поле."
 
 #. translators: %s: number of errors detected
-#: admin/includes/class-contact-forms-list-table.php:137
+#: admin/includes/class-contact-forms-list-table.php:131
 msgid "%s configuration error detected"
 msgid_plural "%s configuration errors detected"
 msgstr[0] "Виявлена %s помилка конфігурації"
 msgstr[1] "Виявлені %s помилки конфігурації"
 msgstr[2] "Виявлено %s помилок конфігурації"
 
-#: admin/admin.php:555 includes/rest-api.php:209 includes/rest-api.php:276
+#: admin/admin.php:646 includes/rest-api.php:209 includes/rest-api.php:278
 msgid "There was an error saving the contact form."
 msgstr "Помилка при збереженні контактної форми."
 
-#: admin/admin.php:155
-msgid "%d configuration errors detected in this tab panel"
-msgstr "Виявлено %d помилки на даній панелі вкладок"
-
-#: admin/admin.php:154
-msgid "1 configuration error detected in this tab panel"
-msgstr "Виявлена 1 помилка на даній панелі вкладок"
-
-#: admin/admin.php:153
-msgid "%d configuration errors detected"
-msgstr "Виявлені %d помилки конфігурації"
-
-#: admin/admin.php:152
-msgid "1 configuration error detected"
-msgstr "Виявлена 1 помилка в конфігурації"
-
 #. translators: 1: WordPress hook name, 2: version number, 3: alternative hook
 #. name
-#: includes/functions.php:564
+#: includes/functions.php:524
 msgid "Hook %1$s is <strong>deprecated</strong> since Contact Form 7 version %2$s! Use %3$s instead."
 msgstr "Хук %1$s <strong>не підтримується</strong> починаючи з Contact Form 7 версії %2$s! Натомість використовуйте %3$s."
 
-#: admin/includes/welcome-panel.php:126
+#: admin/includes/welcome-panel.php:130
 msgid "Flamingo"
 msgstr "Фламінго"
 
 #. translators: %s: link labeled 'Flamingo'
-#: admin/includes/welcome-panel.php:123
+#: admin/includes/welcome-panel.php:127
 msgid "Install a message storage plugin before this happens to you. %s saves all messages through contact forms into the database. Flamingo is a free WordPress plugin created by the same author as Contact Form 7."
 msgstr "Встановіть плагін зберігання повідомлень, перш ніж це трапиться з вами. %s зберігає всі повідомлення в базу даних, що проходять через контактні форми. Flamingo це безкоштовний плагін для WordPress, створений тим же автором, що і Contact Form 7."
 
-#: admin/includes/welcome-panel.php:120
+#: admin/includes/welcome-panel.php:124
 msgid "Contact Form 7 does not store submitted messages anywhere. Therefore, you may lose important messages forever if your mail server has issues or you make a mistake in mail configuration."
 msgstr "Contact Form 7 ніде не зберігає надіслані повідомлення. У зв'язку з цим, ви можете втратити важливі повідомлення, якщо у вашого поштового сервера є проблеми або ви допустили помилки в конфігурації."
 
-#: admin/includes/welcome-panel.php:114
+#: admin/includes/welcome-panel.php:118
 msgid "Before you cry over spilt mail&#8230;"
 msgstr "Перед тим як оплакати втрачену пошту&#8230;"
 
-#: admin/includes/welcome-panel.php:68
+#: admin/includes/welcome-panel.php:73
 msgid "https://contactform7.com/comment-blacklist/"
 msgstr "https://contactform7.com/comment-blacklist/"
 
-#. translators: links labeled 1: 'Akismet', 2: 'reCAPTCHA', 3: 'disallowed
-#. list'
-#: admin/includes/welcome-panel.php:58
-msgid "Contact Form 7 supports spam-filtering with %1$s. Intelligent %2$s blocks annoying spambots. Plus, using %3$s, you can block messages containing specified keywords or those sent from specified IP addresses."
-msgstr "Contact Form 7 підтримує фільтрацію спаму з %1$s. Інтелектуальний %2$s блокує дратуючих спам ботів. Плюс, використовуючи %3$s, ви можете групувати повідомлення за певними ключовими словами або за IP адресами відправників."
-
-#: admin/includes/welcome-panel.php:55
+#: admin/includes/welcome-panel.php:60
 msgid "Spammers target everything; your contact forms are not an exception. Before you get spammed, protect your contact forms with the powerful anti-spam features Contact Form 7 provides."
 msgstr "Спамери зачіпають все, ваші контактні форми не є винятком. Перш ніж вас заспамлять, захистіть ваші контактні форми за допомогою потужних анти-спам функцій Contact Form 7."
 
-#: admin/includes/welcome-panel.php:49
+#: admin/includes/welcome-panel.php:54
 msgid "Getting spammed? You have protection."
 msgstr "Отримуєте спам? У нас є захист."
 
@@ -910,11 +1096,11 @@ msgstr "Отримуєте спам? У нас є захист."
 msgid "Multiple form controls are in a single label element."
 msgstr "Кілька елементів управління форми знаходяться всередині одного елемента маркування."
 
-#: admin/includes/config-validator.php:135
+#: admin/includes/config-validator.php:175
 msgid "FAQ about Configuration Validator"
 msgstr "Часті питання про конфігурацію валідатора"
 
-#: admin/includes/config-validator.php:134
+#: admin/includes/config-validator.php:174
 msgid "https://contactform7.com/configuration-validator-faq/"
 msgstr "https://contactform7.com/configuration-validator-faq/"
 
@@ -922,32 +1108,32 @@ msgstr "https://contactform7.com/configuration-validator-faq/"
 msgid "The answer to the quiz is incorrect."
 msgstr "Неправильна відповідь на питання перевірки."
 
-#: includes/file.php:118
+#: includes/file.php:121
 msgid "There was an error uploading the file."
 msgstr "Під час завантаження файлу сталася помилка."
 
-#: includes/file.php:108
+#: includes/file.php:111
 msgid "You are not allowed to upload files of this type."
 msgstr "Вам не дозволено завантажувати файли цього типу."
 
-#: includes/file.php:103
+#: includes/file.php:106
 msgid "There was an unknown error uploading the file."
 msgstr "Під час завантаження файлу сталася невідома помилка."
 
-#: includes/contact-form-template.php:194
+#: includes/contact-form-template.php:184
 msgid "You must accept the terms and conditions before sending your message."
 msgstr "Ви повинні прийняти умови та положення перед тим, як відправляти Ваше повідомлення."
 
-#: includes/contact-form-template.php:180
+#: includes/contact-form-template.php:174
 msgid "One or more fields have an error. Please check and try again."
 msgstr "Одне або декілька полів містять помилкові дані. Будь ласка, перевірте їх і спробуйте ще раз."
 
-#: includes/contact-form-template.php:173
-#: includes/contact-form-template.php:187
+#: includes/contact-form-template.php:169
+#: includes/contact-form-template.php:179
 msgid "There was an error trying to send your message. Please try again later."
 msgstr "Сталася помилка під час спроби відправити Ваше повідомлення. Будь ласка, спробуйте ще раз пізніше."
 
-#: includes/contact-form-template.php:166
+#: includes/contact-form-template.php:164
 msgid "Thank you for your message. It has been sent."
 msgstr "Дякуємо за Ваше повідомлення. Воно було надіслане."
 
@@ -969,65 +1155,60 @@ msgstr "Перевірте конфігурацію Contact Form 7"
 msgid "https://contactform7.com/configuration-errors/"
 msgstr "https://contactform7.com/configuration-errors/"
 
-#: admin/admin.php:586
+#: admin/admin.php:664
 msgid "Configuration validation completed. No invalid contact form was found."
 msgstr "Перевірка конфігурації завершена. Проблеми в контактних формах не знайдені."
 
 #. translators: %s: number of contact forms
-#: admin/admin.php:572
+#: admin/admin.php:656
 msgid "Configuration validation completed. %s invalid contact form was found."
 msgid_plural "Configuration validation completed. %s invalid contact forms were found."
 msgstr[0] "Перевірка конфігурації завершена. Була виявлена %s невірна форма контактів."
 msgstr[1] "Перевірка конфігурації завершена. Було виявлено %s невірні форми контактів."
 msgstr[2] "Перевірка конфігурації завершена. Було виявлено %s невірних форм контактів."
 
-#: admin/includes/config-validator.php:124
+#: admin/includes/config-validator.php:142
 msgid "Validate Configuration"
 msgstr "Перевірити конфігурацію"
 
 #. translators: %s: number of contact forms
-#: admin/includes/config-validator.php:112
+#: admin/includes/config-validator.php:118
 msgid "Validate %s contact form now"
 msgid_plural "Validate %s contact forms now"
 msgstr[0] "Перевірити зараз %s Форму Контактів"
 msgstr[1] "Перевірити зараз %s Форми Контактів"
 msgstr[2] "Перевірити зараз %s Форм Контактів"
 
-#: admin/includes/config-validator.php:70
+#: admin/includes/config-validator.php:75
 msgid "You are not allowed to validate configuration."
 msgstr "Вам недоступна валідація конфігурації."
 
-#: admin/includes/welcome-panel.php:64 admin/includes/welcome-panel.php:160
-#: modules/recaptcha/recaptcha.php:260 modules/recaptcha/service.php:280
+#: modules/recaptcha/recaptcha.php:254 modules/recaptcha/service.php:303
 msgid "https://contactform7.com/recaptcha/"
 msgstr "https://contactform7.com/recaptcha/"
 
-#: modules/recaptcha/service.php:331 modules/stripe/service.php:228
+#: modules/recaptcha/service.php:372 modules/stripe/service.php:273
+#: modules/turnstile/service.php:351
 msgid "Secret Key"
 msgstr "Таємний ключ"
 
-#: modules/recaptcha/service.php:314
+#: modules/recaptcha/service.php:355 modules/turnstile/service.php:334
 msgid "Site Key"
 msgstr "Ключ сайту"
 
-#: modules/recaptcha/service.php:266 modules/sendinblue/service.php:139
-#: modules/stripe/service.php:149
+#: modules/recaptcha/service.php:273 modules/sendinblue/service.php:147
+#: modules/stripe/service.php:157 modules/turnstile/service.php:246
 msgid "Settings saved."
 msgstr "Налаштування збережено."
 
-#: modules/recaptcha/service.php:261 modules/sendinblue/service.php:132
-#: modules/stripe/service.php:142
+#: modules/recaptcha/service.php:265 modules/sendinblue/service.php:139
+#: modules/stripe/service.php:149
 msgid "Invalid key values."
 msgstr "Помилкове значення ключа."
 
-#: admin/includes/welcome-panel.php:65 admin/includes/welcome-panel.php:161
 #: modules/recaptcha/service.php:29
 msgid "reCAPTCHA"
 msgstr "reCAPTCHA"
-
-#: modules/really-simple-captcha.php:258
-msgid "CAPTCHA (Really Simple CAPTCHA)"
-msgstr "CAPTCHA (Дійсно проста CAPTCHA)"
 
 #. Author URI of the plugin
 #: wp-contact-form-7.php
@@ -1050,128 +1231,67 @@ msgid "https://contactform7.com/"
 msgstr "https://contactform7.com/"
 
 #. translators: title of your first contact form. %d: number fixed to '1'
-#: load.php:193
+#: load.php:195
 msgid "Contact form %d"
 msgstr "Контактна форма %d"
 
-#: modules/textarea.php:149
-msgid "Generate a form-tag for a multi-line text input field. For more details, see %s."
-msgstr "Генеруйте позначку форми для багаторядкового поля введення тексту. Для більш докладної інформації див. %s."
-
-#: modules/textarea.php:141
+#: modules/textarea.php:143
 msgid "text area"
 msgstr "текстова область"
 
-#: modules/text.php:288
-msgid "This field requires author's URL"
-msgstr "Це поле потребує URL автора"
-
-#: modules/text.php:283
-msgid "This field requires author's email address"
-msgstr "Це поле потребує email автора"
-
-#: modules/text.php:278
-msgid "This field requires author's name"
-msgstr "Це поле потребує ім'я автора"
-
-#: admin/includes/welcome-panel.php:61 modules/akismet/service.php:22
-#: modules/text.php:270 modules/text.php:273
+#: admin/includes/welcome-panel.php:66 modules/akismet/service.php:22
 msgid "Akismet"
 msgstr "Akismet"
 
-#: modules/text.php:238 modules/textarea.php:151
-msgid "Text fields"
-msgstr "Текстові поля"
-
-#: modules/text.php:238 modules/textarea.php:151
-msgid "https://contactform7.com/text-fields/"
-msgstr "https://contactform7.com/text-fields/"
-
-#: modules/text.php:235
-msgid "Generate a form-tag for a single-line telephone number input field. For more details, see %s."
-msgstr "Генеруйте позначку форми для однострокового поля введення телефонного номера. Для більш докладної інформації див. %s."
-
-#: modules/text.php:233
-msgid "Generate a form-tag for a single-line URL input field. For more details, see %s."
-msgstr "Генеруйте позначку форми для однострокового поля введення URL. Для більш докладної інформації див. %s."
-
-#: modules/text.php:231
-msgid "Generate a form-tag for a single-line email address input field. For more details, see %s."
-msgstr "Генеруйте позначку форми для однострокового поля введення адреси електронної пошти. Для більш докладної інформації див %s."
-
-#: modules/text.php:229
-msgid "Generate a form-tag for a single-line plain text input field. For more details, see %s."
-msgstr "Генеруйте позначку форми для однострокового поля введення простого тексту. Для більш докладної інформації див. %s."
+#: modules/text.php:230
+msgid "Text field"
+msgstr "Текстове поле"
 
 #: modules/text.php:216
 msgid "tel"
 msgstr "тел."
 
-#: modules/text.php:214
+#: modules/text.php:215
 msgid "URL"
 msgstr "URL"
 
-#: modules/text.php:212
+#: modules/text.php:214
 msgid "email"
 msgstr "email"
 
-#: modules/text.php:210
+#: modules/text.php:213
 msgid "text"
 msgstr "текст"
 
-#: modules/text.php:194
+#: modules/text.php:195
 msgid "Telephone number that the sender entered is invalid"
 msgstr "Введений номер телефону є невірним"
 
-#: modules/text.php:187
+#: modules/text.php:188
 msgid "URL that the sender entered is invalid"
 msgstr "Введений URL є недійсним"
 
-#: modules/text.php:180
+#: modules/text.php:181
 msgid "Email address that the sender entered is invalid"
 msgstr "Введена адреса електронної пошти є невірною"
 
-#: modules/submit.php:65
+#: modules/submit.php:100
 msgid "Label"
 msgstr "Мітка"
 
-#: modules/submit.php:55
+#: modules/submit.php:56
 msgid "Submit button"
 msgstr "Кнопка Відправити"
 
-#: modules/submit.php:55
-msgid "https://contactform7.com/submit-button/"
-msgstr "https://contactform7.com/submit-button/"
-
-#: modules/submit.php:53
-msgid "Generate a form-tag for a submit button. For more details, see %s."
-msgstr "Генеруйте позначку форми для кнопки відправки. Для більш докладної інформації див. %s."
-
-#: modules/submit.php:46
+#: modules/submit.php:47
 msgid "submit"
 msgstr "відправити"
 
-#: modules/select.php:272
-msgid "Insert a blank item as the first option"
-msgstr "Вставте порожній пункт в якості першого варіанту"
-
-#: modules/select.php:271
-msgid "Allow multiple selections"
-msgstr "Дозволити множинний вибір"
-
-#: modules/select.php:238
-msgid "Generate a form-tag for a drop-down menu. For more details, see %s."
-msgstr "Генеруйте тег форми для випадаючого меню. Для більш докладної інформації див. %s."
-
-#: modules/select.php:231
+#: modules/select.php:232
 msgid "drop-down menu"
-msgstr "в розкриваючомуся меню"
+msgstr "випадаюче меню"
 
-#: modules/quiz.php:225
-msgid "One pipe-separated question-answer pair (e.g. The capital of Brazil?|Rio) per line."
-msgstr "Один розділений рядок для пари відповідь-питання в кожному рядку (наприклад: столиця Бразилії?|Rio)."
-
-#: modules/quiz.php:220 modules/quiz.php:223
+#: modules/quiz.php:258
 msgid "Questions and answers"
 msgstr "Питання та відповіді"
 
@@ -1179,43 +1299,27 @@ msgstr "Питання та відповіді"
 msgid "Quiz"
 msgstr "Запитання"
 
-#: modules/quiz.php:205
-msgid "https://contactform7.com/quiz/"
-msgstr "https://contactform7.com/quiz/"
-
-#: modules/quiz.php:203
-msgid "Generate a form-tag for a question-answer pair. For more details, see %s."
-msgstr "Генеруйте позначку форми для пари відповідь-питання. Для більш докладної інформації див. %s."
-
-#: modules/quiz.php:195
+#: modules/quiz.php:196
 msgid "quiz"
-msgstr "опитування"
+msgstr "тест"
 
 #: modules/quiz.php:179
 msgid "Sender does not enter the correct answer to the quiz"
 msgstr "Відправник не дав вірної відповіді на запитання"
 
-#: modules/number.php:229
+#: modules/number.php:252
 msgid "Slider"
 msgstr "Слайдер"
 
-#: modules/number.php:228
+#: modules/number.php:251
 msgid "Spinbox"
 msgstr "Поле лічильника"
 
 #: modules/number.php:213
-msgid "Number fields"
-msgstr "Числові поля"
+msgid "Number field"
+msgstr "Числове поле"
 
-#: modules/number.php:213
-msgid "https://contactform7.com/number-fields/"
-msgstr "https://contactform7.com/number-fields/"
-
-#: modules/number.php:211
-msgid "Generate a form-tag for a field for numeric value input. For more details, see %s."
-msgstr "Генеруйте позначку форми для поля введення числового значення. Для більш докладної інформації див. %s."
-
-#: modules/number.php:203
+#: modules/number.php:204
 msgid "number"
 msgstr "число"
 
@@ -1232,74 +1336,47 @@ msgid "Number format that the sender entered is invalid"
 msgstr "Формат введеного числа є невірним"
 
 #. translators: %s: the path of the temporary folder
-#: includes/file.php:417
+#: includes/file.php:426
 msgid "This contact form has file uploading fields, but the temporary folder for the files (%s) does not exist or is not writable. You can create the folder or change its permission manually."
 msgstr "Ця контактна форма містить поля для завантаження файлів, але тимчасова папка для файлів (%s) не існує або недоступна для запису. Ви можете створити папку або змінити її дозвіл вручну."
 
-#: modules/file.php:209
-msgid "To attach the file uploaded through this field to mail, you need to insert the corresponding mail-tag (%s) into the File Attachments field on the Mail tab."
-msgstr "Щоб прикріпити файл завантажений через це поле до пошти, вам потрібно вставити відповідну поштову-позначку (%s) в поле прикріплення файлів на вкладці Пошта."
-
-#: modules/file.php:181
+#: modules/file.php:205
 msgid "Acceptable file types"
 msgstr "Допустимі типи файлів"
 
-#: modules/file.php:176
-msgid "File size limit (bytes)"
-msgstr "Граничний розмір файлу (в байтах)"
-
-#: modules/file.php:151
-msgid "File uploading and attachment"
-msgstr "Завантаження файлу та прикріплень"
-
-#: modules/file.php:151
-msgid "https://contactform7.com/file-uploading-and-attachment/"
-msgstr "https://contactform7.com/file-uploading-and-attachment/"
-
-#: modules/file.php:149
-msgid "Generate a form-tag for a file uploading field. For more details, see %s."
-msgstr "Генеруйте позначку форми для поля завантаження файлу. Для більш докладної інформації див. %s."
-
-#: modules/file.php:141
+#: modules/file.php:142
 msgid "file"
 msgstr "файл"
 
-#: includes/file.php:117
+#: includes/file.php:120
 msgid "Uploading a file fails for PHP error"
 msgstr "Збій при завантаженні"
 
-#: includes/file.php:112
+#: includes/file.php:115
 msgid "Uploaded file is too large"
 msgstr "Завантажений файл занадто великий"
 
-#: includes/file.php:107
+#: includes/file.php:110
 msgid "Uploaded file is not allowed for file type"
 msgstr "Тип файлу заборонений до завантаження"
 
-#: includes/file.php:102
+#: includes/file.php:105
 msgid "Uploading a file fails for any reason"
 msgstr "Помилка завантаження файлу"
 
-#: modules/date.php:235 modules/number.php:259
+#: admin/includes/tag-generator.php:412
 msgid "Max"
 msgstr "Макс."
 
-#: modules/date.php:230 modules/number.php:254
+#: admin/includes/tag-generator.php:393
 msgid "Min"
 msgstr "Мін."
 
-#: modules/date.php:225 modules/date.php:228 modules/number.php:249
-#: modules/number.php:252
+#: modules/date.php:242 modules/number.php:261
 msgid "Range"
 msgstr "Діапазон"
 
-#: modules/date.php:221 modules/number.php:245 modules/text.php:265
-#: modules/textarea.php:178
-msgid "Use this text as the placeholder of the field"
-msgstr "Використовуйте цей текст як заповнювач поля"
-
-#: modules/date.php:219 modules/number.php:243 modules/text.php:263
-#: modules/textarea.php:176
+#: admin/includes/tag-generator.php:436
 msgid "Default value"
 msgstr "Значення за замовчуванням"
 
@@ -1307,15 +1384,7 @@ msgstr "Значення за замовчуванням"
 msgid "Date field"
 msgstr "Поле дати"
 
-#: modules/date.php:194
-msgid "https://contactform7.com/date-field/"
-msgstr "https://contactform7.com/date-field/"
-
-#: modules/date.php:192
-msgid "Generate a form-tag for a date input field. For more details, see %s."
-msgstr "Генеруйте позначку форми для поля введення дати. Для більш докладної інформації див. %s."
-
-#: modules/date.php:184
+#: modules/date.php:185
 msgid "date"
 msgstr "дата"
 
@@ -1331,164 +1400,65 @@ msgstr "Дата менша за мінімально допустиме зна�
 msgid "Date format that the sender entered is invalid"
 msgstr "Формат введеної дати є невірним"
 
-#: modules/checkbox.php:434 modules/date.php:265 modules/number.php:289
-#: modules/select.php:301 modules/text.php:321 modules/textarea.php:205
-msgid "To use the value input through this field in a mail field, you need to insert the corresponding mail-tag (%s) into the field on the Mail tab."
-msgstr "Щоб використовувати значення, введене через це поле в поле пошти, вам потрібно вставити відповідну поштову-позначку (%s) в поле на вкладці Пошта."
+#: admin/includes/tag-generator.php:562
+msgid "Wrap each item with a label element."
+msgstr "Оберніть кожен пункт за допомогою label-елемента"
 
-#: modules/checkbox.php:404
-msgid "Make checkboxes exclusive"
-msgstr "Зробити чекбокси винятковими"
-
-#: modules/checkbox.php:402
-msgid "Wrap each item with label element"
-msgstr "Оберніть кожен елемент з елементом мітки"
-
-#: modules/checkbox.php:401
-msgid "Put a label first, a checkbox last"
-msgstr "Поставте мітку спочатку, після чекбокс"
-
-#: modules/checkbox.php:400 modules/select.php:270
-msgid "One option per line."
-msgstr "Один варіант в кожному рядку."
-
-#: modules/checkbox.php:383 modules/date.php:208 modules/file.php:165
-#: modules/number.php:232 modules/select.php:254 modules/text.php:252
-#: modules/textarea.php:165
-msgid "Required field"
-msgstr "Обов'язкове поле"
-
-#: modules/checkbox.php:379 modules/checkbox.php:382 modules/date.php:204
-#: modules/date.php:207 modules/file.php:161 modules/file.php:164
-#: modules/number.php:223 modules/number.php:226 modules/select.php:250
-#: modules/select.php:253 modules/text.php:248 modules/text.php:251
-#: modules/textarea.php:161 modules/textarea.php:164
+#: admin/includes/tag-generator.php:219
 msgid "Field type"
 msgstr "Тип поля"
 
-#: modules/checkbox.php:368 modules/select.php:240
-msgid "Checkboxes, radio buttons and menus"
-msgstr "Прапорці, перемикачі та меню"
-
-#: modules/checkbox.php:368 modules/select.php:240
-msgid "https://contactform7.com/checkboxes-radio-buttons-and-menus/"
-msgstr "https://contactform7.com/checkboxes-radio-buttons-and-menus/"
-
-#: modules/checkbox.php:365
-msgid "Generate a form-tag for a group of radio buttons. For more details, see %s."
-msgstr "Генеруйте позначку форми для групи радіо кнопок. Для більш докладної іформації див. %s."
-
-#: modules/checkbox.php:363
-msgid "Generate a form-tag for a group of checkboxes. For more details, see %s."
-msgstr "Генеруйте позначку форми для групи чекбоксів. Для більш докладної інформації див. %s."
-
-#: modules/checkbox.php:350
+#: modules/checkbox.php:352
 msgid "radio buttons"
-msgstr "радіо кнопка"
+msgstr "радіокнопки"
 
-#: modules/checkbox.php:348
+#: modules/checkbox.php:351
 msgid "checkboxes"
-msgstr "чекбокси"
+msgstr "прапорці"
 
-#: modules/really-simple-captcha.php:379
+#: modules/really-simple-captcha.php:293
 msgid "This contact form contains CAPTCHA fields, but the necessary libraries (GD and FreeType) are not available on your server."
 msgstr "Ця форма використовує CAPTCHA, проте необхідні бібліотеки (GD і FreeType) недоступні на Вашому сервері."
 
-#: modules/really-simple-captcha.php:372
+#. translators: %s: Path to the temporary folder
+#: modules/really-simple-captcha.php:282
 msgid "This contact form contains CAPTCHA fields, but the temporary folder for the files (%s) does not exist or is not writable. You can create the folder or change its permission manually."
 msgstr "Ця форма містить поля CAPTCHA, проте тимчасовий каталог для файлів (%s) не існує або недоступний для запису. Ви можете створити цей каталог або встановити дозвіл на запис вручну."
 
-#: modules/really-simple-captcha.php:317
-msgid "Input field settings"
-msgstr "Налаштування полів вводу"
-
-#: modules/really-simple-captcha.php:302
-msgid "Image settings"
-msgstr "Налаштування зображення"
-
-#: modules/really-simple-captcha.php:285
-msgid "https://contactform7.com/captcha/"
-msgstr "https://contactform7.com/captcha/"
-
-#: modules/really-simple-captcha.php:283
-msgid "Generate form-tags for a CAPTCHA image and corresponding response input field. For more details, see %s."
-msgstr "Генеруйте позначки форми для CAPTCHA зображення і відповідного поля введення відповіді. Для більш докладної інформації див. %s."
-
-#. translators: %s: link labeled 'Really Simple CAPTCHA'
-#: modules/really-simple-captcha.php:272
-msgid "To use CAPTCHA, you first need to install and activate %s plugin."
-msgstr "Щоб використовувати CAPTCHA, спочатку необхідно встановити і активувати плагін %s."
-
-#: modules/really-simple-captcha.php:285
-msgid "CAPTCHA"
-msgstr "CAPTCHA"
-
-#: modules/really-simple-captcha.php:239
+#: modules/really-simple-captcha.php:241
 msgid "Your entered code is incorrect."
 msgstr "Введено невірний контрольний код."
 
-#: modules/really-simple-captcha.php:237
+#: modules/really-simple-captcha.php:239
 msgid "The code that sender entered does not match the CAPTCHA"
 msgstr "Невірний код CAPTCHA"
 
-#: modules/acceptance.php:303 modules/checkbox.php:429 modules/date.php:260
-#: modules/file.php:204 modules/number.php:284 modules/quiz.php:249
-#: modules/really-simple-captcha.php:337 modules/select.php:296
-#: modules/submit.php:88 modules/text.php:316 modules/textarea.php:200
+#: admin/includes/tag-generator.php:599
 msgid "Insert Tag"
-msgstr "Вставити позначку"
+msgstr "Вставити тег"
 
-#: modules/acceptance.php:290 modules/checkbox.php:416 modules/date.php:248
-#: modules/file.php:191 modules/number.php:272 modules/quiz.php:236
-#: modules/really-simple-captcha.php:310 modules/really-simple-captcha.php:325
-#: modules/select.php:283 modules/submit.php:75 modules/text.php:303
-#: modules/textarea.php:187
+#: admin/includes/tag-generator.php:362
 msgid "Class attribute"
 msgstr "Атрибут класу"
 
-#: modules/acceptance.php:285 modules/checkbox.php:411 modules/date.php:243
-#: modules/file.php:186 modules/number.php:267 modules/quiz.php:231
-#: modules/really-simple-captcha.php:305 modules/really-simple-captcha.php:320
-#: modules/select.php:278 modules/submit.php:70 modules/text.php:298
-#: modules/textarea.php:182
-msgid "Id attribute"
-msgstr "Атрибут Id"
+#: admin/includes/tag-generator.php:347
+msgid "ID attribute"
+msgstr "ID атрибут"
 
-#: modules/acceptance.php:275 modules/acceptance.php:278
-#: modules/checkbox.php:395 modules/checkbox.php:398 modules/select.php:265
-#: modules/select.php:268
-msgid "Options"
-msgstr "Параметри"
-
-#: modules/acceptance.php:265 modules/checkbox.php:390 modules/date.php:214
-#: modules/file.php:171 modules/number.php:238 modules/quiz.php:215
-#: modules/really-simple-captcha.php:295 modules/select.php:260
-#: modules/text.php:258 modules/textarea.php:171
-#: includes/block-editor/index.js:1
-msgid "Name"
-msgstr "Ім'я"
-
-#: modules/acceptance.php:255
+#: modules/acceptance.php:266
 msgid "Acceptance checkbox"
 msgstr "Відмітка прийняття"
 
-#: modules/acceptance.php:255
-msgid "https://contactform7.com/acceptance-checkbox/"
-msgstr "https://contactform7.com/acceptance-checkbox/"
-
-#: modules/acceptance.php:253
-msgid "Generate a form-tag for an acceptance checkbox. For more details, see %s."
-msgstr "Генеруйте позначку форми для відмітки прийняття. Для отримання додаткової інформації див. %s."
-
-#: modules/acceptance.php:245
+#: modules/acceptance.php:257
 msgid "acceptance"
 msgstr "прийняття"
 
+#. translators: 1: property name, 2: method name
 #: includes/contact-form.php:233
 msgid "<code>%1$s</code> property of a <code>WPCF7_ContactForm</code> object is <strong>no longer accessible</strong>. Use <code>%2$s</code> method instead."
 msgstr "<code>%1$s</code> значення об'єкта <code>WPCF7_ContactForm</code> <strong>більше не доступне</strong>. Натомість використовуйте <code>%2$s</code>."
 
-#: includes/contact-form.php:114 includes/contact-form.php:440
+#: includes/contact-form.php:114 includes/contact-form.php:437
 msgid "Untitled"
 msgstr "Без назви"
 
@@ -1496,37 +1466,33 @@ msgstr "Без назви"
 msgid "Contact Form"
 msgstr "Контактна форма"
 
-#: includes/contact-form-template.php:213
+#: includes/contact-form-template.php:198
 msgid "There is a field with input that is shorter than the minimum allowed length"
 msgstr "Деяке поле має довжину введення менше мінімально допустимого"
 
-#: includes/contact-form-template.php:206
+#: includes/contact-form-template.php:193
 msgid "There is a field with input that is longer than the maximum allowed length"
 msgstr "Деяке поле має довжину введення більше максимально допустимого"
 
-#: includes/contact-form-template.php:199
+#: includes/contact-form-template.php:188
 msgid "There is a field that the sender must fill in"
 msgstr "Це поле необхідно заповнити"
 
-#: includes/contact-form-template.php:192
+#: includes/contact-form-template.php:183
 msgid "There are terms that the sender must accept"
 msgstr "Є умови, які відправник повинен прийняти"
 
-#: includes/contact-form-template.php:185
+#: includes/contact-form-template.php:178
 msgid "Submission was referred to as spam"
 msgstr "Повідомлення визначено як спам"
 
-#: includes/contact-form-template.php:178
+#: includes/contact-form-template.php:173
 msgid "Validation errors occurred"
 msgstr "Помилки при заповненні форми"
 
-#: includes/contact-form-template.php:171
-msgid "Sender's message failed to send"
-msgstr "Не вдалося відправити повідомлення"
-
-#: includes/contact-form-template.php:164
-msgid "Sender's message was sent successfully"
-msgstr "Ваше повідомлення успішно надіслано"
+#: includes/contact-form-template.php:163
+msgid "Sender&#8217;s message was sent successfully"
+msgstr "Повідомлення успішно надіслано"
 
 #: includes/contact-form-template.php:72 includes/contact-form-template.php:106
 msgid "Message Body:"
@@ -1558,8 +1524,8 @@ msgstr "Ваш email"
 msgid "Your name"
 msgstr "Ваше ім'я"
 
-#. translators: %s: title of form-tag like 'email' or 'checkboxes'
-#: admin/includes/tag-generator.php:46
+#. translators: %s: title of form-tag
+#: admin/includes/tag-generator.php:85
 msgid "Form-tag Generator: %s"
 msgstr "Генератор позначки форми: %s"
 
@@ -1593,7 +1559,7 @@ msgstr "Не дивлячись на те, що позначка форми ма
 
 #: admin/includes/help-tabs.php:81
 msgid "A form-tag is a short code enclosed in square brackets used in a form content. A form-tag generally represents an input field, and its components can be separated into four parts: type, name, options, and values. Contact Form 7 supports several types of form-tags including text fields, number fields, date fields, checkboxes, radio buttons, menus, file-uploading fields, CAPTCHAs, and quiz fields."
-msgstr "Позначки форми це короткий код укладений у квадратні дужки, використовуваний у вмісті форми."
+msgstr "Тег форми — це короткий код, укладений у квадратні дужки, який використовується в вмісті форми. Тег форми зазвичай представляє поле вводу, а його компоненти можна розділити на чотири частини: тип, ім'я, опції та значення. Contact Form 7 підтримує кілька типів тегів форм, включаючи текстові поля, числові поля, поля дати, прапорці, перемикачі, меню, поля для завантаження файлів, CAPTCHA та поля для вікторин."
 
 #: admin/includes/help-tabs.php:79
 msgid "<strong>Additional Settings</strong> provides a place where you can customize the behavior of this contact form by adding code snippets."
@@ -1656,73 +1622,74 @@ msgstr "Доступні дії"
 msgid "Overview"
 msgstr "Огляд"
 
-#: admin/includes/editor.php:253
+#. translators: %s: link labeled 'Additional settings'
+#: admin/includes/editor.php:524
 msgid "You can add customization code snippets here. For details, see %s."
 msgstr "Тут Ви можете вказати додаткові параметри налаштування. Для детальної інформації дивіться сторінку %s."
 
-#: admin/includes/editor.php:251
+#: admin/includes/editor.php:526
 msgid "https://contactform7.com/additional-settings/"
 msgstr "https://contactform7.com/additional-settings/"
 
-#: admin/includes/editor.php:199
+#: admin/includes/editor.php:433
 msgid "File attachments"
 msgstr "Прикріплені файли"
 
-#: admin/includes/editor.php:193
+#: admin/includes/editor.php:417
 msgid "Use HTML content type"
 msgstr "Використовувати HTML у повідомленні"
 
-#: admin/includes/editor.php:191
+#: admin/includes/editor.php:397
 msgid "Exclude lines with blank mail-tags from output"
 msgstr "Виключити рядки з порожніми поштовими тегами"
 
-#: admin/includes/editor.php:186
+#: admin/includes/editor.php:360
 msgid "Message body"
 msgstr "Тіло повідомлення"
 
-#: admin/includes/editor.php:177
+#: admin/includes/editor.php:329
 msgid "Additional headers"
 msgstr "Додаткові заголовки"
 
-#: admin/includes/editor.php:168 includes/contact-form-template.php:40
+#: admin/includes/editor.php:301 includes/contact-form-template.php:40
 msgid "Subject"
 msgstr "Тема"
 
-#: admin/includes/editor.php:159
+#: admin/includes/editor.php:273
 msgid "From"
 msgstr "Від кого"
 
-#: admin/includes/editor.php:150
+#: admin/includes/editor.php:245
 msgid "To"
 msgstr "Кому"
 
-#: admin/includes/editor.php:140
+#: admin/includes/editor.php:217
 msgid "In the following fields, you can use these mail-tags:"
-msgstr "У наступних полях Ви можете використовувати ці поштові позначки:"
+msgstr "У наступних полях Ви можете використовувати ці поштові теги:"
 
-#: admin/includes/editor.php:124
+#: admin/includes/editor.php:191
 msgid "Mail (2) is an additional mail template often used as an autoresponder."
 msgstr "Mail (2) - це додатковий шаблон електронної пошти, зазвичай використовується при відправленні автоматичних відповідей."
 
-#: admin/includes/editor.php:90
+#: admin/includes/editor.php:130
 msgid "Use Mail (2)"
-msgstr "Використати пошту (2)"
+msgstr "Використовувати Mail (2)"
 
-#: admin/includes/editor.php:89
+#: admin/includes/editor.php:129
 msgid "Mail (2)"
-msgstr "Пошта (2)"
+msgstr "Mail (2)"
 
 #. translators: date format, see https://www.php.net/date
-#: admin/includes/class-contact-forms-list-table.php:236
+#: admin/includes/class-contact-forms-list-table.php:229
 msgid "Y/m/d"
 msgstr "Y/m/d"
 
 #. translators: %s: title of contact form
-#: admin/includes/class-contact-forms-list-table.php:122
+#: admin/includes/class-contact-forms-list-table.php:115
 msgid "Edit &#8220;%s&#8221;"
 msgstr "Редагувати &#8220;%s&#8221;"
 
-#: admin/includes/class-contact-forms-list-table.php:169
+#: admin/includes/class-contact-forms-list-table.php:162
 msgid "Edit"
 msgstr "Редагувати"
 
@@ -1743,24 +1710,24 @@ msgstr "Короткий код"
 msgid "Title"
 msgstr "Заголовок"
 
-#: admin/edit-contact-form.php:266 admin/includes/editor.php:257
+#: admin/edit-contact-form.php:449 admin/includes/editor.php:536
 msgid "Additional Settings"
 msgstr "Додаткові налаштування"
 
 #. translators: %d: number of additional settings
-#: admin/edit-contact-form.php:264
+#: admin/edit-contact-form.php:446
 msgid "Additional Settings (%d)"
 msgstr "Додаткові налаштування (%d)"
 
-#: admin/edit-contact-form.php:244 admin/includes/editor.php:227
+#: admin/edit-contact-form.php:426 admin/includes/editor.php:481
 msgid "Messages"
 msgstr "Повідомлення"
 
-#: admin/edit-contact-form.php:240 admin/includes/editor.php:98
+#: admin/edit-contact-form.php:422 admin/includes/editor.php:138
 msgid "Mail"
 msgstr "Пошта"
 
-#: admin/edit-contact-form.php:236 admin/includes/editor.php:66
+#: admin/edit-contact-form.php:418 admin/includes/editor.php:91
 msgid "Form"
 msgstr "Форма"
 
@@ -1772,11 +1739,11 @@ msgstr "Підтримка"
 msgid "https://contactform7.com/support/"
 msgstr "https://contactform7.com/support/"
 
-#: admin/edit-contact-form.php:192 admin/includes/help-tabs.php:99
+#: admin/edit-contact-form.php:369 admin/includes/help-tabs.php:99
 msgid "FAQ"
 msgstr "Часті питання"
 
-#: admin/edit-contact-form.php:191 admin/includes/help-tabs.php:99
+#: admin/edit-contact-form.php:368 admin/includes/help-tabs.php:99
 msgid "https://contactform7.com/faq/"
 msgstr "https://contactform7.com/faq/"
 
@@ -1784,127 +1751,111 @@ msgstr "https://contactform7.com/faq/"
 msgid "Docs"
 msgstr "Документація"
 
-#: admin/edit-contact-form.php:195 admin/includes/help-tabs.php:98
+#: admin/edit-contact-form.php:372 admin/includes/help-tabs.php:98
 msgid "https://contactform7.com/docs/"
 msgstr "https://contactform7.com/docs/"
 
-#: admin/edit-contact-form.php:167
-msgid ""
-"You are about to delete this contact form.\n"
-"  'Cancel' to stop, 'OK' to delete."
-msgstr ""
-"Ви збираєтеся видалити цю контактну форму.\n"
-" ’Скасувати’, щоб зупинити, ’ОК’, щоб видалити."
-
-#: admin/edit-contact-form.php:167
-#: admin/includes/class-contact-forms-list-table.php:90
+#: admin/edit-contact-form.php:311
+#: admin/includes/class-contact-forms-list-table.php:83
 msgid "Delete"
 msgstr "Видалити"
 
-#: admin/edit-contact-form.php:152
-#: admin/includes/class-contact-forms-list-table.php:187
+#: admin/edit-contact-form.php:282
+#: admin/includes/class-contact-forms-list-table.php:180
 msgid "Duplicate"
 msgstr "Дублювати"
 
-#: admin/edit-contact-form.php:138
+#: admin/edit-contact-form.php:246
 msgid "Status"
 msgstr "Статус"
 
-#: admin/edit-contact-form.php:124
+#: admin/edit-contact-form.php:205
 msgid "You can also use this old-style shortcode:"
 msgstr "Ви також можете використовувати цей короткий код старого зразку:"
 
-#: admin/edit-contact-form.php:117
+#: admin/edit-contact-form.php:173
 msgid "Copy this shortcode and paste it into your post, page, or text widget content:"
 msgstr "Скопіюйте цей короткий код і вставте його в свої записи, сторінки або зміст тексту віджета:"
 
-#: admin/edit-contact-form.php:95
+#: admin/edit-contact-form.php:152 admin/edit-contact-form.php:153
 msgid "Enter title here"
 msgstr "Введіть назву тут"
 
-#: admin/edit-contact-form.php:26 admin/edit-contact-form.php:145
+#: admin/edit-contact-form.php:14 admin/edit-contact-form.php:272
 msgid "Save"
 msgstr "Зберегти"
 
-#: admin/admin.php:659
+#: admin/admin.php:730
 msgid "You are not allowed to edit this contact form."
 msgstr "Ви не можете редагувати цю контактну форму."
 
-#: admin/includes/welcome-panel.php:125
+#: admin/includes/welcome-panel.php:129
 msgid "https://contactform7.com/save-submitted-messages-with-flamingo/"
 msgstr "https://contactform7.com/save-submitted-messages-with-flamingo/"
 
-#: modules/akismet/service.php:58
+#: modules/akismet/service.php:65
 msgid "Spam filtering with Akismet"
 msgstr "Фільтрація спаму з допомогою Akismet"
 
-#: admin/includes/welcome-panel.php:60 modules/akismet/service.php:57
+#: admin/includes/welcome-panel.php:65 modules/akismet/service.php:64
 msgid "https://contactform7.com/spam-filtering-with-akismet/"
 msgstr "https://contactform7.com/spam-filtering-with-akismet/"
 
-#: admin/includes/editor.php:134
+#: admin/includes/editor.php:208
 msgid "Setting up mail"
 msgstr "Налаштування пошти"
 
-#: admin/includes/editor.php:133
+#: admin/includes/editor.php:207
 msgid "https://contactform7.com/setting-up-mail/"
 msgstr "https://contactform7.com/setting-up-mail/"
 
-#: admin/includes/welcome-panel.php:96
-msgid "https://contactform7.com/donate/"
-msgstr "https://contactform7.com/donate/"
-
-#: admin/includes/welcome-panel.php:85
+#: admin/includes/welcome-panel.php:90
 msgid "Contact Form 7 needs your support."
 msgstr "Contact Form 7 потребує вашої підтримки."
 
-#: admin/includes/welcome-panel.php:212
+#: admin/includes/welcome-panel.php:218
 msgid "Dismiss"
 msgstr "Приховати"
 
 #. translators: 1: version of Contact Form 7, 2: version of WordPress, 3: URL
-#: admin/admin.php:635
+#: admin/admin.php:708
 msgid "<strong>Contact Form 7 %1$s requires WordPress %2$s or higher.</strong> Please <a href=\"%3$s\">update WordPress</a> first."
 msgstr "<strong>Contact Form 7 %1$s потребує версію WordPress %2$s або новішу.</strong> Будь ласка, <a href=\"%3$s\">оновіть WordPress</a>."
 
-#: admin/admin.php:612
+#: admin/admin.php:690
 msgid "Settings"
 msgstr "Налаштування"
 
-#: admin/admin.php:541
+#: admin/admin.php:643
 msgid "Contact form deleted."
 msgstr "Контактну форму видалено."
 
-#: admin/admin.php:539
+#: admin/admin.php:641
 msgid "Contact form saved."
 msgstr "Контактну форму збережено."
 
-#: admin/admin.php:537
+#: admin/admin.php:639
 msgid "Contact form created."
 msgstr "Контактну форму створено."
 
-#: admin/admin.php:434
+#: admin/admin.php:503
 msgid "Search Contact Forms"
 msgstr "Пошук контактних форм"
 
 #. translators: %s: search keywords
-#: admin/admin.php:411
+#: admin/admin.php:467
 msgid "Search results for &#8220;%s&#8221;"
 msgstr "Результати пошуку &#8220;%s&#8221;"
 
-#: admin/admin.php:145
-msgid "The changes you made will be lost if you navigate away from this page."
-msgstr "Внесені зміни будуть втрачені, якщо ви підете з цієї сторінки."
-
-#: admin/admin.php:316
+#: admin/admin.php:349
 msgid "Error in deleting."
 msgstr "Помилка під час видалення."
 
-#: admin/admin.php:311
+#: admin/admin.php:343
 msgid "You are not allowed to delete this item."
 msgstr "Недостатньо прав для видалення."
 
-#: admin/admin.php:218 admin/admin.php:269
+#: admin/admin.php:245 admin/admin.php:298
 msgid "You are not allowed to edit this item."
 msgstr "Недостатньо прав для редагування."
 
@@ -1912,25 +1863,17 @@ msgstr "Недостатньо прав для редагування."
 msgid "Integration"
 msgstr "Інтеграція"
 
-#: admin/admin.php:52 admin/admin.php:402 admin/edit-contact-form.php:47
-msgid "Add New"
-msgstr "Додати"
-
-#: admin/admin.php:51 admin/edit-contact-form.php:36
-msgid "Add New Contact Form"
-msgstr "Додати нову контактну форму"
-
-#: admin/admin.php:41 admin/admin.php:395 includes/contact-form.php:51
+#: admin/admin.php:41 admin/admin.php:444 includes/contact-form.php:51
 msgid "Contact Forms"
 msgstr "Контактні форми"
 
-#: admin/admin.php:40 admin/edit-contact-form.php:38
+#: admin/admin.php:40 admin/edit-contact-form.php:42
 msgid "Edit Contact Form"
 msgstr "Редагувати контактну форму"
 
 #: admin/admin.php:30
 msgid "Contact"
-msgstr "Зв'язок"
+msgstr "Contact Form 7"
 
 #. Plugin Name of the plugin
 #: wp-contact-form-7.php admin/admin.php:29 modules/flamingo.php:215
