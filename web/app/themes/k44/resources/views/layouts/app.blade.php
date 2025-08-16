@@ -2,30 +2,32 @@
 <html @php(language_attributes())>
 
 <head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		@php(do_action('get_header'))
-		@php(wp_head())
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	@php(do_action('get_header'))
+	@php(wp_head())
+
+	{{-- <link rel="stylesheet" href="app/themes/k44/js_composer.min.css"> --}}
 </head>
 
 <body @php(body_class())>
-		@php(wp_body_open())
-		<div id="app">
-				@include('sections.header')
-				<div class="wrap site__container" role="document">
-						<main class="main">
-								@yield('content')
-						</main>
-				</div>
-				@include('sections.footer')
+	@php(wp_body_open())
+	<div id="app">
+		@include('sections.header')
+		<div class="wrap site__container" role="document">
+			<main class="main">
+				@yield('content')
+			</main>
 		</div>
+		@include('sections.footer')
+	</div>
 
-		{{-- <div class="preloader">
-				<img src="@asset('./images/search.svg')" alt="search button" width="24" height="24">
-		</div> --}}
+	{{-- <div class="preloader">
+		<img src="@asset('./images/search.svg')" alt="search button" width="24" height="24">
+	</div> --}}
 
-		@php(do_action('get_footer'))
-		@php(wp_footer())
+	@php(do_action('get_footer'))
+	@php(wp_footer())
 </body>
 
 </html>

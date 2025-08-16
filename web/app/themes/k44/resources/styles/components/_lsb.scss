@@ -259,8 +259,8 @@ $lsbZindex: 30;
   width: 70px;
   height: 70px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: calc(50% - 35px);
+  right: calc(50% - 35px);
 
   .waitingicon-circle {
     width: 100%;

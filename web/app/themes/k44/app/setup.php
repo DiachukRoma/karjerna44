@@ -64,14 +64,14 @@ add_action('widgets_init', function () {
     ];
 
     register_sidebar([
-            'name' => __('Primary', 'sage'),
-            'id' => 'sidebar-primary',
-        ] + $config);
+        'name' => __('Primary', 'sage'),
+        'id' => 'sidebar-primary',
+    ] + $config);
 
     register_sidebar([
-            'name' => __('Footer', 'sage'),
-            'id' => 'sidebar-footer',
-        ] + $config);
+        'name' => __('Footer', 'sage'),
+        'id' => 'sidebar-footer',
+    ] + $config);
 });
 
 add_action('wp_enqueue_scripts', function () {
@@ -79,6 +79,11 @@ add_action('wp_enqueue_scripts', function () {
         bundle('404')->enqueue();
     } elseif (is_singular('post') || is_singular('events')) {
         bundle('single')->enqueue();
+
+        global $post;
+        if (1) {
+            // wp_enqueue_style('old-style', get_stylesheet_directory_uri() . '/js_composer.min.css');
+        }
     } elseif (is_post_type_archive('ministers')) {
         bundle('archive-ministers')->enqueue();
     } elseif (is_post_type_archive('events') || (!is_front_page() && is_home()) || is_category() && !is_search()) {
@@ -156,15 +161,15 @@ add_action('init', function () {
 /**
  * Remove some photo sizes and add some sizes
  */
-add_filter('intermediate_image_sizes_advanced', 'true_remove_default_sizes');
-function true_remove_default_sizes($sizes)
-{
-    unset($sizes['large']);
-    unset($sizes['medium_large']);
-    unset($sizes['1536x1536']);
-    unset($sizes['2048x2048']);
-    return $sizes;
-}
+// add_filter('intermediate_image_sizes_advanced', 'true_remove_default_sizes');
+// function true_remove_default_sizes($sizes)
+// {
+//     unset($sizes['large']);
+//     unset($sizes['medium_large']);
+//     unset($sizes['1536x1536']);
+//     unset($sizes['2048x2048']);
+//     return $sizes;
+// }
 
 /**
  * Add new post type - Events
