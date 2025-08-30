@@ -165,7 +165,8 @@
 
     &__post {
       margin-bottom: 1rem;
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 5fr;
 
       &-date {
         background: #f5f5f5;

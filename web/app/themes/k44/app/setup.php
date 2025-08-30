@@ -81,8 +81,8 @@ add_action('wp_enqueue_scripts', function () {
         bundle('single')->enqueue();
 
         global $post;
-        if (1) {
-            // wp_enqueue_style('old-style', get_stylesheet_directory_uri() . '/js_composer.min.css');
+        if (($post->post_type == 'events' || $post->post_type == 'post') && strtotime($post->post_date) < strtotime('2025-08-30')) {
+            wp_enqueue_style('old-style', get_stylesheet_directory_uri() . '/js_composer.min.css');
         }
     } elseif (is_post_type_archive('ministers')) {
         bundle('archive-ministers')->enqueue();

@@ -6,8 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	@php(do_action('get_header'))
 	@php(wp_head())
-
-	{{-- <link rel="stylesheet" href="app/themes/k44/js_composer.min.css"> --}}
 </head>
 
 <body @php(body_class())>
