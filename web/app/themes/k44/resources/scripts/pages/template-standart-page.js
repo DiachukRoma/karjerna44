@@ -14,6 +14,7 @@ jQuery(document).on('ready', function () {
         prevArrow: $('.slider__arrows-left', main),
         nextArrow: $('.slider__arrows-right', main),
         appendDots: $('.slider__dots', main),
+        adaptiveHeight: true,
         dots: true,
         responsive: [
           {

@@ -5,28 +5,37 @@
   margin: 3rem 0;
 
   .container {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+    display: flex;
     gap: 1.5rem;
 
     @include _768 {
-      display: flex;
       flex-flow: wrap;
       flex-direction: column-reverse;
+    }
+  }
+
+  &__data {
+    width: 75%;
+
+    @include _768 {
+      width: 100%;
     }
   }
 
   ul,
   ol {
     li {
-      line-height: 1.5rem;
+      line-height: 2rem;
       color: $main;
+      font-size: 1.2rem;
+      letter-spacing: 0.05rem;
     }
   }
 
   &-title {
     color: $main;
     font-size: 2rem;
+    margin: 3rem 0 1rem;
   }
 
   &-photo {
@@ -58,8 +67,11 @@
   }
 
   &__nav {
+    width: 25%;
+
     @include _768 {
       background-color: $grey;
+      width: 100%;
     }
 
     ul {
@@ -148,26 +160,26 @@
 
         &.photos {
           &__1 {
-            height: 56rem;
+            min-height: 56rem;
 
             @include _600 {
-              height: auto;
+              min-height: auto;
             }
           }
 
           &__2 {
-            height: 34rem;
+            min-height: 34rem;
 
             @include _600 {
-              height: auto;
+              min-height: auto;
             }
           }
 
           &__3 {
-            height: 26rem;
+            min-height: 26rem;
 
             @include _600 {
-              height: auto;
+              min-height: auto;
             }
           }
         }
@@ -265,5 +277,11 @@
         background-color: $grey;
       }
     }
+  }
+}
+
+@include _768 {
+  .content-gallery__grid .content-gallery__slide-lsb {
+    min-height: auto;
   }
 }

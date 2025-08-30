@@ -2,9 +2,10 @@
 
 .slide {
   position: relative;
+  overflow: hidden;
 
   &__photo {
-    height: 340px;
+    aspect-ratio: 1;
     display: block;
     background-size: cover;
     background-position: center 20%;
