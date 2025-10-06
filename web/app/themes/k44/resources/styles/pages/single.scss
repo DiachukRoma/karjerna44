@@ -28,5 +28,19 @@ body.single {
         padding: 2rem 0 1rem;
       }
     }
+
+    .alignleft {
+      float: left;
+      margin-right: 24px;
+    }
+
+    .alignright {
+      float: right;
+      margin-left: 24px;
+    }
+
+    &-text {
+      margin-bottom: 24px;
+    }
   }
 }

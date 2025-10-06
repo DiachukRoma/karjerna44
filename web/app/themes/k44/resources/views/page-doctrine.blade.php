@@ -35,7 +35,7 @@
             </div>
 
             <audio controls>
-              <source src="{{ $item['link'] }}" type="audio/mpeg">
+              <source src="{{ $item['is_file'] ? $item['file'] : $item['link'] }}" type="audio/mpeg">
               Your browser does not support the audio element.
             </audio>
           </div>
