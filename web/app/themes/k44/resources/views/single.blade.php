@@ -12,7 +12,7 @@
 
 	<section class="content">
 		<div class="container">
-			@if (!isset($content[1]))
+			@if (isset($content[0]['acf_fc_layout']))
 				@foreach ($content as $item)
 					@include('components.content-' . $item['acf_fc_layout'], $item)
 				@endforeach

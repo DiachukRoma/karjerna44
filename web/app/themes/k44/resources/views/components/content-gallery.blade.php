@@ -4,14 +4,17 @@
       @if ($item['settings'])
         <a href="{{ $i['url'] }}" class="content-gallery__slide-photo lsb-preview photos__{{ $item['photo_count'] }}" data-lsb-group="gallery" style="background-image: url('{!! $i['url'] !!}')">
           <img src="{{ $i['url'] }}" class="content-gallery__slide-img" alt="{{ $i['alt'] }}" width="{{ $i['width'] }}" height="{{ $i['height'] }}">
-          @if ($i['alt'])
-            <span class="content-gallery__slide-alt">{!! $i['alt'] !!}</span>
+          @if ($i['caption'])
+            <span class="content-gallery__slide-alt">{!! $i['caption'] !!}</span>
           @endif
         </a>
       @else
         <div class="content-gallery__slide slide">
           <a href="{{ $i['url'] }}" class="content-gallery__slide-lsb lsb-preview" data-lsb-group="gallery" style="background-image: url('{!! $i['url'] !!}')">
             <img src="{{ $i['url'] }}" class="content-gallery__slide-img" alt="{{ $i['alt'] }}" width="{{ $i['width'] }}" height="{{ $i['height'] }}">
+            @if ($i['caption'])
+              <span class="content-gallery__slide-alt">{!! $i['caption'] !!}</span>
+            @endif
           </a>
         </div>
       @endif
