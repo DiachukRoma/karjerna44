@@ -12,7 +12,7 @@
 			<div class="top__block top__block-second">
 				<div class="top__box top__box--light">
 					<div class="top__posts">
-						<h5 class="top__box-title">Останні події</h5>
+						<h5 class="top__box-title">{{ __('Останні події', 'k44') }}</h5>
 						@foreach ($last_events as $item)
 						<div class="top__post">
 							<div class="top__post-date">
@@ -21,7 +21,7 @@
 							</div>
 							<div class="top__post-info">
 								<a href="{{ $item->link }}" class="top__post-title">{!! $item->title !!}</a>
-								<a href="{{ $item->link }}" class="top__post-more">Детальнiше</a>
+								<a href="{{ $item->link }}" class="top__post-more">{{ __('Детальнiше', 'k44') }}</a>
 							</div>
 						</div>
 						@endforeach
@@ -34,15 +34,17 @@
 				<div class="top__box">
 					<div class="top__contact-block">
 						<div class="top__contact">
-							<strong class="top__contact-title">Наша адреса:</strong>
+							<strong class="top__contact-title">{{ __('Наша адреса:', 'k44') }}</strong>
 							<p class="top__contact-info">{!! $side_menu->address !!}</p>
 						</div>
 
 						<div class="top__contact">
-							<strong class="top__contact-title">Контакти:</strong>
+							<strong class="top__contact-title">{{ __('Контакти:', 'k44') }}</strong>
 							<p class="top__contact-info">{!! $side_menu->phone_1 !!}</p>
 							<p class="top__contact-info">{!! $side_menu->phone_2 !!}</p>
 						</div>
+
+						<x-donation :isGray="true" />
 					</div>
 
 					<div class="top__contact">
@@ -133,6 +135,8 @@
 					<a href="tel:{!! $side_menu->phone_2 !!}" class="contacts__contact-info">{!! $side_menu->phone_2
 						!!}</a>
 				</div>
+
+				<x-donation />
 
 				<div class="contacts__contact contacts__contact-socials">
 					<strong class="contacts__contact-title">Соцiальнi мережi:</strong>

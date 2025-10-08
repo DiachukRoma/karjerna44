@@ -1,5 +1,6 @@
 
 @import "../layouts/header-sipmple-page";
+@import '../components/donation';
 
 body {
   background: $blue;
@@ -85,9 +86,6 @@ body {
     .btn {
       background-color: #333840;
       width: auto;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
 
       &:hover {
         background-color: $silver;

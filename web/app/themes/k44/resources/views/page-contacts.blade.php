@@ -28,6 +28,8 @@
 						!!}</a>
 				</div>
 
+				<x-donation />
+
 				<div class="contacts__contact contacts__contact-socials">
 					<strong class="contacts__contact-title">Соцiальнi мережi:</strong>
 					<div class="socials">

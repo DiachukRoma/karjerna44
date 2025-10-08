@@ -1,6 +1,7 @@
 import { Loader } from 'google-maps';
 import $ from 'jquery';
 import 'slick-carousel';
+import { donation } from '../components/donation';
 
 $(function () {
   const sliders = ['worship', 'events', 'ministers'];
@@ -51,4 +52,9 @@ $(function () {
       title: 'Кар\'єрна 44',
     });
   });
+
+  /**
+   * Donation
+   */
+  donation();
 });

@@ -1,0 +1,128 @@
+.donation {
+  position: relative;
+  z-index: 1;
+
+  &__btn {
+    margin: 32px 0 0 !important;
+
+    &--light {
+      background-color: #333840;
+    }
+  }
+
+  &__popup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: #000b1cb3;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__popup-close {
+    position: absolute;
+    right: -28px;
+    top: -28px;
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      margin-bottom: 5px;
+      background-color: #fff;
+
+      &:nth-child(1) {
+        transform: rotate(-45deg) translate(-7px, 17px);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(45deg) translate(12px, 2px);
+      }
+    }
+  }
+
+  &__popup-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__popup-control {
+    color: #fff;
+    background-color: $blue;
+    letter-spacing: 0.8px;
+    padding: 15px 50px;
+    border: 1px solid #000b1c93;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &.active {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    @include _768 {
+      padding: 10px 16px;
+    }
+  }
+
+  &__popup-tab {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__popup-tabs {
+    padding: 24px 32px;
+    overflow: auto;
+    max-height: 530px;
+
+    @include _768 {
+      padding: 24px;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    max-width: 720px;
+    background: #272c34;
+    margin: 0 24px;
+
+    @include _768 {
+      margin: 80px 24px 24px;
+    }
+
+    p {
+      color: #fff;
+      line-height: 150%;
+    }
+
+    h4 {
+      font-size: 22px;
+      line-height: 2rem;
+
+      @include _768 {
+        font-size: 18px;
+        line-height: 130%;
+      }
+    }
+
+    .alignright {
+      float: right;
+    }
+  }
+}

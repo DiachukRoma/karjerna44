@@ -1,5 +1,6 @@
 import { Loader } from 'google-maps';
 import jQuery from 'jquery'
+import { donation } from '../components/donation';
 
 jQuery(document).on('ready', function ($) {
   const loader = new Loader('AIzaSyA85cnYnOaeQeODj0KbFAd-21kDX4ILkj0', {});
@@ -19,4 +20,9 @@ jQuery(document).on('ready', function ($) {
       title: 'Кар\'єрна 44',
     });
   });
+
+  /**
+   * Donation
+   */
+  donation();
 });

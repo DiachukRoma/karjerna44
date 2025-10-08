@@ -1,6 +1,7 @@
 @import '../common/variables';
 @import '../components/carousel';
 @import '../components/scroll-bar';
+@import '../components/donation';
 
 .home {
   .top {
@@ -379,9 +380,8 @@
     .btn {
       background-color: #333840;
       width: auto;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
+      margin: auto;
+      display: block;
 
       &:hover {
         background-color: $silver;
@@ -418,6 +418,16 @@
 
       &-form-control-wrap {
         display: block;
+      }
+
+      &-form {
+        position: relative;
+      }
+
+      &-spinner {
+        position: absolute;
+        left: calc(50% + 26px);
+        bottom: 11px;
       }
     }
   }
