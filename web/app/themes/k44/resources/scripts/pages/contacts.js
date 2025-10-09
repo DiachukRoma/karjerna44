@@ -1,24 +1,21 @@
-import { Loader } from 'google-maps';
-import jQuery from 'jquery'
+import domReady from '@roots/sage/client/dom-ready';
 import { donation } from '../components/donation';
 
-jQuery(document).on('ready', function ($) {
-  const loader = new Loader('AIzaSyA85cnYnOaeQeODj0KbFAd-21kDX4ILkj0', {});
+domReady(async () => {
+  const google = await googleMaps(themeData.googleApiKey);
 
-  loader.load().then(function (google) {
-    const coordinates = { lat: 50.430249719290615, lng: 30.439162423300274 };
-    const map = new google.maps.Map(document.getElementById('map'), {
-      center: coordinates,
-      mapId: 'bf8c9b0c12f4fefe',
-      zoom: 15,
-      disableDefaultUI: true,
-    });
+  const coordinates = { lat: 50.430249719290615, lng: 30.439162423300274 };
+  const map = new google.maps.Map(document.getElementById('map'), {
+    center: coordinates,
+    zoom: 15,
+    mapId: 'bf8c9b0c12f4fefe',
+    disableDefaultUI: true,
+  });
 
-    new google.maps.Marker({
-      position: coordinates,
-      map,
-      title: 'Кар\'єрна 44',
-    });
+  new google.maps.marker.AdvancedMarkerElement({
+    map,
+    position: coordinates,
+    title: "Кар'єрна 44",
   });
 
   /**

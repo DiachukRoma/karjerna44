@@ -75,6 +75,8 @@ add_action('widgets_init', function () {
 });
 
 add_action('wp_enqueue_scripts', function () {
+    $googleKey = env('GOOGLE_MAPS_API_KEY');
+
     if (is_404()) {
         bundle('404')->enqueue();
     } elseif (is_singular('post') || is_singular('events')) {
@@ -106,7 +108,7 @@ add_action('wp_enqueue_scripts', function () {
         $post_slug = $post->post_name;
 
         if (in_array($post_slug, $reserved)) {
-            bundle($post_slug)->enqueue();
+            bundle($post_slug)->enqueue()->localize('themeData', ['googleApiKey' => $googleKey]);
         } else {
             bundle('template-standart-page')->enqueue();
         }
@@ -157,19 +159,6 @@ add_action('admin_init', function () {
 add_action('init', function () {
     add_post_type_support('page', 'excerpt');
 });
-
-/**
- * Remove some photo sizes and add some sizes
- */
-// add_filter('intermediate_image_sizes_advanced', 'true_remove_default_sizes');
-// function true_remove_default_sizes($sizes)
-// {
-//     unset($sizes['large']);
-//     unset($sizes['medium_large']);
-//     unset($sizes['1536x1536']);
-//     unset($sizes['2048x2048']);
-//     return $sizes;
-// }
 
 /**
  * Add new post type - Events

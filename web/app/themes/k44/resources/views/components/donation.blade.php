@@ -3,7 +3,7 @@
 ])
 
 <div class="donation">
-    <button class="donation__btn btn btn__standart {{ $isGray ? 'donation__btn--light' : '' }}" data-pop=".donation__popup">{{ __('Добровільні пожертвування', 'k44') }}</button>
+    <button class="donation__btn btn btn__standart {{ $isGray ? 'donation__btn--light' : '' }}" data-pop=".donation__popup">{{ __('Пожертвування', 'k44') }}</button>
 
     <div class="donation__popup">
         <div class="donation__wrap">
