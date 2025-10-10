@@ -2,6 +2,8 @@
   <a href="{{ $post->link }}" class="search__photo" @if ($post->img) style="background-image: url('{!! $post->img !!}')" @endif>
     @if (!$post->img)
       <span class="search__letters">{{ $post->twoLetters }}</span>
+    @else
+      <img src="{{ $post->img }}" alt="{!! $post->title !!}">
     @endif
   </a>
   <div class="search__date">

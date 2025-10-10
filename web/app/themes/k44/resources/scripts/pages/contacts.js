@@ -1,4 +1,5 @@
 import domReady from '@roots/sage/client/dom-ready';
+import { googleMaps } from '../components/google-maps';
 import { donation } from '../components/donation';
 
 domReady(async () => {

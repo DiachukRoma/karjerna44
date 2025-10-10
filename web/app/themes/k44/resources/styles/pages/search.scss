@@ -36,28 +36,16 @@ body.search {
       border-radius: 4px;
 
       &__photo {
-        height: 340px;
         display: block;
         position: relative;
         background-size: cover;
         background-position: center center;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
+        height: calc(100% - 134px);
 
-        @include _1600 {
-          height: 300px;
-        }
-
-        @include _1440 {
-          height: 240px;
-        }
-
-        @include _768 {
-          height: 300px;
-        }
-
-        @include _600 {
-          height: 240px;
+        img {
+          width: 100%;
         }
       }
 

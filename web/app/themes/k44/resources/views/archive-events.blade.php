@@ -5,7 +5,8 @@
 	width="{{ $back_image->top_image['width'] }}" height="{{ $back_image->top_image['height'] }}">
 	<div class="container">
 		<h1 class="top__title">Події</h1>
-		<p class="top__subtitle">{{ __("Ми організовуємо різноманітні події — від святкових богослужінь до сімейних вечорів. Це гарна можливість разом прославляти Бога та будувати міцну християнську сім'ю", 'k44') }}</p>
+		<p class="top__subtitle">{{ __("Ми організовуємо різноманітні події — від святкових богослужінь до сімейних
+			вечорів. Це гарна можливість разом прославляти Бога та будувати міцну християнську сім'ю", 'k44') }}</p>
 		@include('partials.breadcrumbs')
 	</div>
 </section>
@@ -25,6 +26,9 @@
 					<img src="@asset('./images/calendar.svg')" alt="search button" width="20" height="20">
 				</button>
 				<input type="text" id="calendar" class="search-form__input" placeholder="Дата..." readonly />
+				<button type="button" class="search-form__clear">
+					<span></span><span></span>
+				</button>
 			</div>
 		</form>
 	</div>

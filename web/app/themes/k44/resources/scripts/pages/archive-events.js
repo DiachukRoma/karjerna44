@@ -10,6 +10,8 @@ $(function () {
     searchPosts();
   });
 
+  const clearBtn = $('.search-form__clear');
+
   const calendar = new vanillaCalendar('#calendar', {
     settings: {
       range: {
@@ -33,9 +35,11 @@ $(function () {
           localStorage.setItem('paginationPage', 1);
           searchPosts(true);
           calendar.hide();
+          clearBtn.addClass('active');
         } else {
           calendar.HTMLInputElement.value = '';
           searchPosts(true);
+          clearBtn.removeClass('active');
         }
       },
     },
@@ -48,6 +52,12 @@ $(function () {
     },
   });
   calendar.init();
+
+  clearBtn.on('click', () => {
+    calendar.HTMLInputElement.value = '';
+    searchPosts(true);
+    clearBtn.removeClass('active');
+  })
 
   $('#text-search').on('keyup keydown', debounce(() => {
     localStorage.setItem('paginationPage', 1);

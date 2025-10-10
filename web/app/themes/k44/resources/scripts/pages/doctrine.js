@@ -54,6 +54,7 @@ $(function () {
 
   $('.content__nav .search-form__input').on('keyup keydown', debounce(() => {
     const searchTerm = $('.content__nav .search-form__input').val().toLowerCase();
+
     $('.content-audio').each(function () {
       const text = $(this).text().toLowerCase();
       if (text.includes(searchTerm)) {

@@ -10,18 +10,8 @@
     background-size: cover;
     background-position: center 20%;
     width: inherit;
-
-    @include _1600 {
-      height: 300px;
-    }
-
-    @include _1440 {
-      height: 240px;
-    }
-
-    @include _768 {
-      height: 300px;
-    }
+    height: auto;
+    border-radius: 4px;
   }
 
   &__date {

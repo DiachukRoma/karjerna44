@@ -90,6 +90,10 @@ add_action('wp_enqueue_scripts', function () {
         bundle('archive-ministers')->enqueue();
     } elseif (is_post_type_archive('events') || (!is_front_page() && is_home()) || is_category() && !is_search()) {
         bundle('archive-events')->enqueue()->localize('loadmore_params', array('ajaxurl' => admin_url('admin-ajax.php')));
+
+        if (get_query_var('s')) {
+            bundle('search')->enqueue();
+        }
     } elseif (is_search()) {
         bundle('search')->enqueue();
     } else {
