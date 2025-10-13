@@ -12,8 +12,9 @@
   <section class="content">
     <div class="container">
       @if ($main->online)
-        <div class="content__youtube">
-          <iframe width="420" height="315" src="https://www.youtube.com/embed/{{ $main->youtube_link }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
+        <div class="content__offline">
+          <p class="content__offline-title">Для перегляду трансляції - будь ласка, перейдіть на наш канал. Ви також можете відвідати наш Youtube канал для перегляду інших записів служінь.</p>
+          <a href="{{ $main->youtube_link }}" target="_blank" class="btn btn__standart">Перейти на Youtube</a>
         </div>
       @else
         <div class="content__offline">

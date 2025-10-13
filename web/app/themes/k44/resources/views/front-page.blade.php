@@ -74,8 +74,10 @@
 					<h5 class="top__box-title">{{ $item['title'] }}</h5>
 					<div class="top__box-data">
 						<p class="top__box-description">{{ $item['description'] }}</p>
-						<x-btn-with-arrow :title="$item['link']['title']" :link="$item['link']['url']" :isDark="false">
-						</x-btn-with-arrow>
+
+						@if (isset($item['link']) && !empty($item['link']['title']))
+							<x-btn-with-arrow :title="$item['link']['title']" :link="$item['link']['url']" :isDark="false" />
+						@endif
 					</div>
 				</div>
 				@endforeach
