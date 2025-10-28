@@ -58,6 +58,7 @@ class FrontPage extends Composer
         $data['posts'] = $this->mapPosts(get_posts([
             'post_type' => 'events',
             'numberposts' => 12,
+            'post_status'    => ['publish', 'future']
         ]));
         $data['linkAll'] = (object) ['title' => 'Переглянути всi', 'url' => home_url('/events')];
 
