@@ -2,10 +2,12 @@
 	<a href="{{ $post->link }}" class="slide__photo" style="background-image: url('{!! $post->img !!}')"></a>
 	<div class="slide__date {{ $post->isFuture ? 'slide__date-future' : '' }}">
 		@if ($post->isFuture)
-			<p class="slide__date-mo">Майбутня подія</p>
+			<p class="slide__date-mo slide__date-future-text">{{ __('Майбутня подія', 'k44') }}</p>
 		@endif
-		<p class="slide__date-day">{{ $post->dateDay }}</p>
-		<p class="slide__date-mo">{{ $post->dateMoAndYear }}</p>
+		<div>
+			<p class="slide__date-day">{{ $post->dateDay }}</p>
+			<p class="slide__date-mo">{{ $post->dateMoAndYear }}</p>
+		</div>
 	</div>
 	<a href="{{ $post->link }}" class="slide__title">{!! $post->title !!}</a>
 	@if (isset($post->tag))

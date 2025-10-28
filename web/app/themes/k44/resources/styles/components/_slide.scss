@@ -39,9 +39,19 @@
     }
 
     &-future {
-      width: 5.75rem;
-      height: 3.75rem;
+      width: 10rem;
+      height: auto;
       background: #a5e0ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 7px 16px;
+      gap: 8px;
+
+      &-text {
+        font-size: 14px;
+        font-weight: 700;
+      }
     }
   }
 
