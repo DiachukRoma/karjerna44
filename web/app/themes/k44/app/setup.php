@@ -208,7 +208,7 @@ add_action('init', function () {
             'search_items' => 'Знайти служителя',
             'not_found' => 'Не знайдено',
             'not_found_in_trash' => 'Не знайдено у корзині',
-            'menu_name' => 'Сдужителі',
+            'menu_name' => 'Служителі',
         ],
         'menu_position' => 4,
         'public' => true,
